@@ -182,34 +182,55 @@ $font2: 'Ubuntu', sans-serif;
 }
 
 .catalog-items {
+  display: flex;  
+  flex-wrap: wrap;
 }
 
 .catalog-item {
-  width: 20%;
+  width: 25%;
+  margin-bottom: 52px;
+  border-right: 1px solid $bcol;  
+  position: relative;
+  background-color: #FFF;
+  &:nth-child(25) {
+    display: none;
+  }  
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $bcol;    
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+  } 
+  &:hover {
+    cursor: pointer;
+    .sproduct-hide {
+      opacity: 1;
+      visibility: visible;
+      height: auto;
+    }
+  } 
 }
 .catalog-col-r-full {
   .catalog-item {
-    width: 25%;
+    width: 20%;
+    &:nth-child(25) {
+      display: block;
+    }  
   }
 }
 
-.sproduct {
-  border-right: 1px solid $bcol;
-  padding: 0 26px;
-  &:hover {
-   .sproduct-hide {
-    opacity: 1;
-    visibility: visible;
-    height: auto;
-  }   
-} 
-
+.sproduct-cont-1 {
+  padding: 0 26px 0px 26px;
 }
 
-
-.sproduct-img-w {
-
+.sproduct-cont-2 {
+  padding: 0 26px 26px 26px;
 }
+
 .sproduct-top {
   display: flex;
   height: 230px;
@@ -237,6 +258,9 @@ $font2: 'Ubuntu', sans-serif;
   &:hover {
     color: #FFF;
     text-decoration: none;
+  }
+  &:empty {
+    display: none;
   }
 }
 
@@ -308,11 +332,22 @@ $font2: 'Ubuntu', sans-serif;
   margin-right: 18px;
 }
 
-.sproduct-price-old {
-  font-size: 13px;
-  font-weight: 300;
-  color: rgb(0, 0, 0);
-  display: inline-block;
+.sproduct-price-old {      
+ font-size: 13px;
+ font-weight: 300;
+ color: rgb(0, 0, 0);
+ display: inline-block;
+ position: relative;
+ &:before {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 1px;
+   background-color: #E01F2E;
+   bottom: 50%;
+   position: absolute;
+   left: 0;
+ }
 }
 
 .sproduct-watsupp {
@@ -332,13 +367,34 @@ $font2: 'Ubuntu', sans-serif;
   margin-top: 14px;
 }
 
+.sproduct-not-availability {
+ font-size: 13px;
+ font-weight: 300;
+ color: #999999;
+ margin-top: 14px; 
+}
+
+.sproduct-hide-wrap {
+  position: relative;
+  background-color: #FFF;
+}
+
 .sproduct-hide {
-  margin-top: 22px;
+  position: absolute;
+  top: 22px;
+  left: 0;  
   height: 0;
   opacity: 0;
-  visibility: visible;  
-          transition: 0.5s;
+  visibility: hidden;  
+  transition: 0.5s;
+  z-index: 10;
+  background-color: #FFF;  
+  margin-left: -1px;
+  margin-right: -1px;
+  padding: 0 26px 26px 26px;
 }
+
+
 
 .sproduct-chars-row {
   margin-bottom: 20px;
@@ -584,9 +640,230 @@ input[type="radio"].sproduct-color-chb, input[type="checkbox"].sproduct-color-ch
   line-height: 32px;
 }
 
+.catfilter-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.catfilter-btn {
+ padding: 0 25px;
+ height: 32px;
+ font-size: 13px;
+ line-height: 32px; 
+}
+.catfilter-btn-o {
+  padding: 0 25px;
+  height: 32px;
+  font-size: 13px;
+  line-height: 32px;
+  background: none;
+  color: #999999;
+  &:hover {
+    color: #999;
+    background-color: #F5F5F5;
+  }
+  &:focus {
+   color: #999; 
+ }
+}
+
+.catfilter {
+
+}
+.catfilter-it {
+  padding: 25px 0;
+  border-bottom: 1px solid $bcol;
+  &:first-child {
+    padding-top: 0;
+  }
+}
+.catfilter-tit {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #313130;
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:hover {
+    text-decoration: none;
+  }
+  &:after {
+    content: ''; 
+    margin-left: 10px;
+    border: 5px solid transparent;
+    border-right: 5px solid #e01f2e;
+    transform: rotate(90deg);
+    transition: 0.1s;
+    margin-top: 0px;
+    display: block;
+    
 
 
+  }
+  &.hide {
+    margin-bottom: 0;
+    &:after {
+      transform: rotate(-90deg);
+      margin-top: 8px;
+    }
+  }
+}
 
+
+.catfilter-cont {  
+  transition: 0.5s;
+  &.hide {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+label.catfilter-lbl {
+  margin-bottom: 10px;
+  display: block;  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  input[type="checkbox"] {
+    display: none;
+    + span {
+      font-size: 13px;
+      font-weight: 300;
+      color: #313130;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-left: 30px;
+      &:before {
+        position: absolute;
+        left: 0;        
+        content: "";
+        display: flex;
+        width: 20px;
+        height: 20px;
+        background-color: #f5f5f5;
+        border-radius: 3px;
+      }      
+    }
+    &:checked {
+      + span {
+        font-weight: 600;
+        &:before {
+          background-color: #e01f2e;
+        }
+        &:after {
+         position: absolute;
+         left: 0;        
+         content: "";
+         display: flex;
+         width: 20px;
+         height: 20px;
+         background: transparent url("../img/check_mark.png") $nr center;
+       }
+     }
+   }
+ }
+}
+
+.show-more-prods {
+  display: block;
+  padding: 0 0 20px 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e01f2e;
+  text-align: center;
+  border-bottom: 1px solid $bcol;
+  &:hover {
+    text-decoration: none;    
+  }
+}
+
+
+ul.spagin {
+  display: flex;  
+  justify-content: center;
+  list-style: none;
+  padding: 24px 0;
+  border-bottom: 1px solid $bcol;  
+  align-items: center;
+  li {
+    margin: 0 15px;
+    a {
+      display: block;
+      font-size: 14px;
+      color: #e01f2e;
+      font-weight: 600;
+      &:hover {
+        text-decoration: none;
+        color: #000;
+      }
+      &.active {
+        color: #313130;
+      }
+    }
+  }
+  li.spagin-prev {  
+    margin-right: auto;
+  }
+  li.spagin-next {
+    margin-left: auto;
+    a {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.spagin-control {  
+  a {
+   width: 11px;
+   height: 20px;
+   display: block;
+   background: url("../img/nav-arrow0.png") $nr 0 0;
+   &:hover {
+    background-position: top -60px left 0;
+  } 
+}  
+}
+
+
+.fivereasons {
+  padding: 23px 0 54px 0; 
+  background-color: #f5f5f5;
+}
+.contain {}
+.fivereasons-w {
+  display: flex;  
+  justify-content: space-between;  
+  flex-wrap: wrap;
+}
+.fivereasons-it {
+  width: 227px;
+  p {
+    font-size: 14px;
+    color: #313130;
+    line-height: 1.7;
+    a {      
+      color: #e01f2e;
+    }
+  }
+}
+.fivereasons-img-w {
+  margin-bottom: 14px;
+}
+
+.fivereasons-tit {
+  font-size: 30px;
+  line-height: 2.3;
+  font-weight: 600;
+  color: #313130;
+  margin-bottom: 5px;
+}
 
 @import "_media.scss";
 @import "_hides.scss";

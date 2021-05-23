@@ -29,5 +29,16 @@ jQuery(document).ready(function( $ ) {
     });
   });
 
+
+  $('.catfilter-it').each(function () {
+    let tit = $(this).find('.catfilter-tit');
+    let cont = $(this).find('.catfilter-cont');
+    tit.click(function (e) {
+      e.preventDefault();
+      $(this).toggleClass('hide');
+      cont.toggleClass('hide');
+    });
+  });
+
 }); //ready
 

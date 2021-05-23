@@ -35,7 +35,7 @@
           <a href="#" class="filter-share"></a>
         </div>
         <div class="filter-row">          
-          <a href="#" class="filter-open">Фильтр<span class="filter-open-span"></span></a>
+          <a href="#" class="filter-open enable">Фильтр<span class="filter-open-span"></span></a>
 
           <div class="filter-right">
             <ul class="sort-ul">
@@ -46,108 +46,432 @@
           </div>
         </div>
         <div class="catalog-cols">
-          <div class="catalog-col-l">
-            here
-          </div>
-          <div class="catalog-col-r">
-            <div class="catalog-items">
-              <div class="catalog-item sproduct">
-                <div href="#" class="sproduct-top">
-                  <a href="#" class="product-img-w"><img src="img/sneaker-1.jpg" /></a>
-                  <a href="#" class="sproduct-sale">-25%</a>
-                  <div class="sproduct-actions">
-                    <a href="#" class="sproduct-compare"></a>
-                    <a href="#" class="sproduct-like"></a>
-                  </div>
-                </div>
-                <a href="#" class="sproduct-title">Кроссовки женские Under Armour HOVR Sonic 3</a>
-                <div class="sproduct-pay">от 348 Р в мес.<a href="#" class="sproduct-pay-info"></a></div>
-                <div class="sproduct-price-row"><span class="sproduct-price">6 974 Р</span><span class="sproduct-price-old">9 299 Р</span><a href="#" class="sproduct-watsupp"></a></div>
-                <div class="sproduct-availability">в наличии</div>
-                <div class="sproduct-hide">
-                  <div class="sproduct-chars-row">
-                    <div class="sproduct-chars-title">Цвет</div>
-                    <div class="sproduct-chars-content">
-                      <div class="sproduct-color-lbls">
-                        <label class="sproduct-color-lbl">
-                          <input type="checkbox" class="sproduct-color-chb" checked>
-                          <span style="background-color: #d3d5d2;"></span>
-                        </label>
-                        <label class="sproduct-color-lbl">
-                          <input type="checkbox" class="sproduct-color-chb">
-                          <span style="background-color: #aec4b5;"></span>
-                        </label>
-                        <label class="sproduct-color-lbl">
-                          <input type="checkbox" class="sproduct-color-chb">
-                          <span style="background-color: #b1b8c5;"></span>
-                        </label>
-                      </div><!--sproduct-color-lblsa-->
-                    </div>
-                  </div>
-                  <div class="sproduct-chars-row">
-                    <div class="sproduct-chars-title">Размер</div>
-                    <div class="sproduct-chars-content">
-                      <div class="sproduct-color-lbls">
-                       <label class="sproduct-color-lbl2">
-                        <input type="checkbox" class="sproduct-color-chb2">
-                        <span>37,5</span>
-                      </label>
-                      <label class="sproduct-color-lbl2">
-                        <input type="checkbox" class="sproduct-color-chb2">
-                        <span>38</span>
-                      </label>
-                      <label class="sproduct-color-lbl2">
-                        <input type="checkbox" class="sproduct-color-chb2">
-                        <span>39</span>
-                      </label>
-                      <label class="sproduct-color-lbl2">
-                        <input type="checkbox" class="sproduct-color-chb2">
-                        <span>40</span>
-                      </label>
-                      <label class="sproduct-color-lbl2">
-                        <input type="checkbox" class="sproduct-color-chb2">
-                        <span>41</span>
-                      </label>
-                      <div class="sproduct-color-lbls-dis">
-                        <span class="sproduct-size-dis">42</span>
-                        <span class="sproduct-size-dis">43</span>
-                      </div>                      
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="sproduct-reviews-row">
-                  <div class="sproduct-reviews-stars">
-                    <span class="sproduct-reviews-star"></span>
-                  <span class="sproduct-reviews-star"></span>
-                  <span class="sproduct-reviews-star"></span>
-                  <span class="sproduct-reviews-star"></span>
-                  <span class="sproduct-reviews-star-o"></span>
-                  </div>                  
-                  <div class="sproduct-reviews-lbl">3 отзыва</div>
-                </div>
+          <div class="catalog-col-l show">
+            <div class="catfilter">
 
-                <div class="sproduct-chars-txts"><span class="sproduct-chars-tit">Ближайшая доставка:</span> 30.03.2021</div>
-                <div class="sproduct-chars-txts"><span class="sproduct-chars-tit">Продавец</span> Neotren</div>
-              </div>
-              <div class="sproduct-quantity">
-                <form class="sproduct-quantity-form">
-                  <div class="sproduct-quantity-controls">
-                    <a href="#" class="sproduct-quantity-control sproduct-quantity-minus">-</a>
-                    <input class="sproduct-quantity-input" type="text" value="1" />
-                    <a href="#" class="sproduct-quantity-control sproduct-quantity-plus">+</a>
-                  </div>
-                  <button class="btn sproduct-btn"><span>В корзину</span></button>
-                </form>
-              </div>
-            </div>
-          </div>
+              <div class="catfilter-it">
+                <a href="#" class="catfilter-tit">Розничная цена</a>
+                <div class="catfilter-cont">
+
+                </div><!--catfilter-cont-->
+              </div><!--catfilter-it-->
+
+              <div class="catfilter-it">
+                <a href="#" class="catfilter-tit">Бренд</a>
+                <div class="catfilter-cont">
+                  <label class="catfilter-lbl">
+                    <input type="checkbox">
+                    <span>Adidas</span>
+                  </label>
+                  <label class="catfilter-lbl">
+                    <input type="checkbox">
+                    <span>ASICS</span>
+                  </label>
+                  <label class="catfilter-lbl">
+                    <input type="checkbox" checked>
+                    <span>Hoka</span>
+                  </label>
+                  <label class="catfilter-lbl">
+                    <input type="checkbox" checked>
+                    <span>Mizuno</span>
+                  </label>
+                  <label class="catfilter-lbl">
+                    <input type="checkbox">
+                    <span>New Balance</span>
+                  </label>
+                  <label class="catfilter-lbl">
+                    <input type="checkbox">
+                    <span>Nike</span>
+                  </label>
+                  <label class="catfilter-lbl">
+                    <input type="checkbox">
+                    <span>Salomon</span>
+                  </label>
+                  <label class="catfilter-lbl">
+                    <input type="checkbox">
+                    <span>Under Armour</span>
+                  </label>
+                </div><!--catfilter-cont-->
+              </div><!--catfilter-it-->
+
+              <div class="catfilter-it">
+                <a href="#" class="catfilter-tit">Пол</a>
+                <div class="catfilter-cont">
+                 <label class="catfilter-lbl">
+                  <input type="checkbox">
+                  <span>Мужской</span>
+                </label>
+                <label class="catfilter-lbl">
+                  <input type="checkbox">
+                  <span>Женский</span>
+                </label>
+              </div><!--catfilter-cont-->
+            </div><!--catfilter-it-->
+
+            <div class="catfilter-it">
+              <a href="#" class="catfilter-tit">Сезон одежды и обуви</a>
+              <div class="catfilter-cont">
+               <label class="catfilter-lbl">
+                <input type="checkbox">
+                <span>Лето</span>
+              </label>
+              <label class="catfilter-lbl">
+                <input type="checkbox">
+                <span>Зима</span>
+              </label>
+              <label class="catfilter-lbl">
+                <input type="checkbox">
+                <span>Межсезонье</span>
+              </label>
+            </div><!--catfilter-cont-->
+          </div><!--catfilter-it-->
+          <div class="catfilter-it">
+            <a href="#" class="catfilter-tit hide">Пронация</a>
+            <div class="catfilter-cont hide">
+             <label class="catfilter-lbl">
+              <input type="checkbox">
+              <span>Межсезонье</span>
+            </label>
+          </div><!--catfilter-cont-->
+        </div><!--catfilter-it-->
+        <div class="catfilter-it">
+          <a href="#" class="catfilter-tit hide">Покрытие</a>
+          <div class="catfilter-cont hide">
+           <label class="catfilter-lbl">
+            <input type="checkbox">
+            <span>Межсезонье</span>
+          </label>
+        </div><!--catfilter-cont-->
+      </div><!--catfilter-it-->
+      <div class="catfilter-it">
+        <a href="#" class="catfilter-tit hide">Вес одного кроссовка, г</a>
+        <div class="catfilter-cont hide">
+         <label class="catfilter-lbl">
+          <input type="checkbox">
+          <span>Межсезонье</span>
+        </label>
+      </div><!--catfilter-cont-->
+    </div><!--catfilter-it-->
+    <div class="catfilter-it">
+      <a href="#" class="catfilter-tit hide">Вид спорта</a>
+      <div class="catfilter-cont hide">
+       <label class="catfilter-lbl">
+        <input type="checkbox">
+        <span>Межсезонье</span>
+      </label>
+    </div><!--catfilter-cont-->
+  </div><!--catfilter-it-->
+
+  <div class="catfilter-actions">
+    <button class="btn catfilter-btn">Показать</button>
+    <button type="reset" class="btn catfilter-btn-o">Сбросить</button>
+  </div><!--catfilter-actions-->
+
+
+
+</div><!--catfilter-->
+</div>
+<div class="catalog-col-r">
+  <div class="catalog-items">
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки женские Under Armour HOVR Sonic 3",
+      "pricee": "6 974 Р",
+      "oldpricee": "9 299 Р",
+      "imagee": "sneaker-1.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-2.jpg",
+      "availability": "<div class='sproduct-not-availability'>нет наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-4.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-4.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-2.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки женские Under Armour HOVR Sonic 3",
+      "pricee": "6 974 Р",
+      "oldpricee": "9 299 Р",
+      "imagee": "sneaker-1.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-2.jpg",
+      "availability": "<div class='sproduct-not-availability'>нет наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-4.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-4.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-2.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки женские Under Armour HOVR Sonic 3",
+      "pricee": "6 974 Р",
+      "oldpricee": "9 299 Р",
+      "imagee": "sneaker-1.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-2.jpg",
+      "availability": "<div class='sproduct-not-availability'>нет наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-4.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-4.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-2.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-3.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": ""
+    })
+    @@include('var/_catalog-item.html',
+    {
+      "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+      "pricee": "8 843 Р",
+      "oldpricee": "11 790 Р",
+      "imagee": "sneaker-4.jpg",
+      "availability": "<div class='sproduct-availability'>в наличии</div>",
+      "salee": "-25%"
+    })
+  </div>
+  <a href="#" class="show-more-prods">Показать больше товаров</a>
+  <ul class="spagin">
+    <li class="spagin-control spagin-prev"><a href="#"></a></li>
+    <li><a class="active" href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+    <li><a href="#">...</a></li>
+    <li><a href="#">134</a></li>
+    <li class="spagin-control spagin-next"><a href="#"></a></li>    
+  </ul>
+</div><!--col-r-->
+</div><!--cols-->
+</div><!--catalog-->
+</div><!--contain-->
+<div class="fivereasons">
+  <div class="container">
+    <div class="fivereasons-tit">5 причин купить качественные кроссовки для бега в Fitness-Place.RU</div>
+    <div class="fivereasons-w">
+      <div class="fivereasons-it">
+        <div class="fivereasons-img-w">
+          <img src="img/running_19438.png" alt="image" title="image">
         </div>
-      </div>
-    </div>
+        <p>
+          Свыше 150 моделей беговых кроссовок в наличии 
+          в спортивном магазине
+          в Москве <a href="#">с выставочным залом</a> площадью 2000 кв.м.
+        </p>
+      </div><!--item-->
+      <div class="fivereasons-it">
+        <div class="fivereasons-img-w">
+          <img src="img/basketball_19439.png" alt="image" title="image">
+        </div>
+        <p>
+          Бесплатная примерка 
+          и пробежка на беговой дорожке прямо в магазине покупкой ежедневно с 9 до 21
+        </p>
+      </div><!--item-->
+      <div class="fivereasons-it">
+        <div class="fivereasons-img-w">
+          <img src="img/bycicle_19440.png" alt="image" title="image">
+        </div>
+        <p>
+          Профессиональная <a href="#">видеоконсультация 
+          по WhatsApp</a> по любым кроссовкам из наличия 
+          в магазине
+        </p>
+      </div><!--item-->
+      <div class="fivereasons-it">
+        <div class="fivereasons-img-w">
+          <img src="img/trophy_19441.png" alt="image" title="image">
+        </div>
+        <p>
+          Доставка беговых и фитнес кроссовок возможна по всей России через курьерские компании
+        </p>
+      </div><!--item-->
+      <div class="fivereasons-it">
+        <div class="fivereasons-img-w">
+          <img src="img/dumbbell_19442.png" alt="image" title="image">
+        </div>
+        <p>
+          На все кроссовки предоставляется <a href="#">официальная гарантия</a> от производителя
+        </p>
+      </div><!--item-->
+    </div><!--fivereasons-w-->
+  </div>
+</div><!--fivereasons-->
 
-
-  </div><!--contain-->
 
 </div><!--wrapper-->
 
