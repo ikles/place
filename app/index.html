@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная</title>    
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/catalog.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,117 +17,137 @@
 <![endif]-->
 </head>
 <body>
-
   <div class="wrapper">
-
-    <div class="container">
-
-      <div class="tp-banner"><img src="img/tp-banner.jpg" /></div>
-      <div class="bread">
-        <ul class="bread-ul">
-          <li class="bread-li"><a href="#" class="bread-a">Главная</a></li>
-          <li class="bread-li"><a href="#" class="bread-a">Каталог</a></li>
-          <li class="bread-li"><span class="bread-span">Обувь</span></li>
-        </ul>
-      </div>
-      <div class="catalog">
-        <div class="cat-title-wrap">
-          <h2 class="cat-title">Кроссовки для бега</h2>
-          <a href="#" class="filter-share"></a>
+    @@include('var/_header.html')
+    <div class="cataloglist">
+      <div class="container">
+        <div class="cataloglist-inn">
+        <div class="tp-banner"><img src="img/tp-banner.jpg" /></div>
+        <div class="bread">
+          <ul class="bread-ul">
+            <li class="bread-li"><a href="#" class="bread-a">Главная</a></li>
+            <li class="bread-li"><a href="#" class="bread-a">Каталог</a></li>
+            <li class="bread-li"><span class="bread-span">Обувь</span></li>
+          </ul>
         </div>
-        <div class="filter-row">          
-          <a href="#" class="filter-open enable">Фильтр<span class="filter-open-span"></span></a>
-
-          <div class="filter-right">
-            <ul class="sort-ul">
-              <li class="sort-li"><a href="#" class="sort-a active">По умолчанию</a></li>
-              <li class="sort-li"><a href="#" class="sort-a">Сначала дешевле</a></li>
-              <li class="sort-li"><a href="#" class="sort-a">Сначала подороже</a></li>
-            </ul>
+        <div class="catalog">
+          <div class="cat-title-wrap">
+            <h2 class="cat-title">Кроссовки для бега</h2>
+            <a href="#" class="filter-share"></a>
           </div>
-        </div>
-        <div class="catalog-cols">
-          <div class="catalog-col-l show">
-            <div class="catfilter">
+          <div class="filter-row">          
+            <a href="#" class="filter-open enable">Фильтр<span class="filter-open-span"></span></a>
 
-              <div class="catfilter-it">
-                <a href="#" class="catfilter-tit">Розничная цена</a>
-                <div class="catfilter-cont">
+            <div class="filter-right">
+              <ul class="sort-ul">
+                <li class="sort-li"><a href="#" class="sort-a active">По умолчанию</a></li>
+                <li class="sort-li"><a href="#" class="sort-a">Сначала дешевле</a></li>
+                <li class="sort-li"><a href="#" class="sort-a">Сначала подороже</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="catalog-cols">
+            <div class="catalog-col-l show">
+              <div class="catfilter">
 
+                <div class="catfilter-it">
+                  <a href="#" class="catfilter-tit">Розничная цена</a>
+                  <div class="catfilter-cont">
+
+                    <div class="form__line">
+                      <div class="price">
+                        <div class="price__range"></div>
+                        <div class="price__inputs">
+                          <input id="price-start" type="text" class="input">
+                          <span>-</span>
+                          <input id="price-end" type="text" class="input">
+                        </div>
+                      </div>
+                    </div><!--form__line-->
+
+                  </div><!--catfilter-cont-->
+                </div><!--catfilter-it-->
+
+                <div class="catfilter-it">
+                  <a href="#" class="catfilter-tit">Бренд</a>
+                  <div class="catfilter-cont">
+                    <label class="catfilter-lbl">
+                      <input type="checkbox">
+                      <span>Adidas</span>
+                    </label>
+                    <label class="catfilter-lbl">
+                      <input type="checkbox">
+                      <span>ASICS</span>
+                    </label>
+                    <label class="catfilter-lbl">
+                      <input type="checkbox" checked>
+                      <span>Hoka</span>
+                    </label>
+                    <label class="catfilter-lbl">
+                      <input type="checkbox" checked>
+                      <span>Mizuno</span>
+                    </label>
+                    <label class="catfilter-lbl">
+                      <input type="checkbox">
+                      <span>New Balance</span>
+                    </label>
+                    <label class="catfilter-lbl">
+                      <input type="checkbox">
+                      <span>Nike</span>
+                    </label>
+                    <label class="catfilter-lbl">
+                      <input type="checkbox">
+                      <span>Salomon</span>
+                    </label>
+                    <label class="catfilter-lbl">
+                      <input type="checkbox">
+                      <span>Under Armour</span>
+                    </label>
+                  </div><!--catfilter-cont-->
+                </div><!--catfilter-it-->
+
+                <div class="catfilter-it">
+                  <a href="#" class="catfilter-tit">Пол</a>
+                  <div class="catfilter-cont">
+                   <label class="catfilter-lbl">
+                    <input type="checkbox">
+                    <span>Мужской</span>
+                  </label>
+                  <label class="catfilter-lbl">
+                    <input type="checkbox">
+                    <span>Женский</span>
+                  </label>
                 </div><!--catfilter-cont-->
               </div><!--catfilter-it-->
 
               <div class="catfilter-it">
-                <a href="#" class="catfilter-tit">Бренд</a>
-                <div class="catfilter-cont">
-                  <label class="catfilter-lbl">
-                    <input type="checkbox">
-                    <span>Adidas</span>
-                  </label>
-                  <label class="catfilter-lbl">
-                    <input type="checkbox">
-                    <span>ASICS</span>
-                  </label>
-                  <label class="catfilter-lbl">
-                    <input type="checkbox" checked>
-                    <span>Hoka</span>
-                  </label>
-                  <label class="catfilter-lbl">
-                    <input type="checkbox" checked>
-                    <span>Mizuno</span>
-                  </label>
-                  <label class="catfilter-lbl">
-                    <input type="checkbox">
-                    <span>New Balance</span>
-                  </label>
-                  <label class="catfilter-lbl">
-                    <input type="checkbox">
-                    <span>Nike</span>
-                  </label>
-                  <label class="catfilter-lbl">
-                    <input type="checkbox">
-                    <span>Salomon</span>
-                  </label>
-                  <label class="catfilter-lbl">
-                    <input type="checkbox">
-                    <span>Under Armour</span>
-                  </label>
-                </div><!--catfilter-cont-->
-              </div><!--catfilter-it-->
-
-              <div class="catfilter-it">
-                <a href="#" class="catfilter-tit">Пол</a>
+                <a href="#" class="catfilter-tit">Сезон одежды и обуви</a>
                 <div class="catfilter-cont">
                  <label class="catfilter-lbl">
                   <input type="checkbox">
-                  <span>Мужской</span>
+                  <span>Лето</span>
                 </label>
                 <label class="catfilter-lbl">
                   <input type="checkbox">
-                  <span>Женский</span>
+                  <span>Зима</span>
+                </label>
+                <label class="catfilter-lbl">
+                  <input type="checkbox">
+                  <span>Межсезонье</span>
                 </label>
               </div><!--catfilter-cont-->
             </div><!--catfilter-it-->
-
             <div class="catfilter-it">
-              <a href="#" class="catfilter-tit">Сезон одежды и обуви</a>
-              <div class="catfilter-cont">
+              <a href="#" class="catfilter-tit hide">Пронация</a>
+              <div class="catfilter-cont hide">
                <label class="catfilter-lbl">
-                <input type="checkbox">
-                <span>Лето</span>
-              </label>
-              <label class="catfilter-lbl">
-                <input type="checkbox">
-                <span>Зима</span>
-              </label>
-              <label class="catfilter-lbl">
                 <input type="checkbox">
                 <span>Межсезонье</span>
               </label>
             </div><!--catfilter-cont-->
           </div><!--catfilter-it-->
           <div class="catfilter-it">
-            <a href="#" class="catfilter-tit hide">Пронация</a>
+            <a href="#" class="catfilter-tit hide">Покрытие</a>
             <div class="catfilter-cont hide">
              <label class="catfilter-lbl">
               <input type="checkbox">
@@ -135,7 +156,7 @@
           </div><!--catfilter-cont-->
         </div><!--catfilter-it-->
         <div class="catfilter-it">
-          <a href="#" class="catfilter-tit hide">Покрытие</a>
+          <a href="#" class="catfilter-tit hide">Вес одного кроссовка, г</a>
           <div class="catfilter-cont hide">
            <label class="catfilter-lbl">
             <input type="checkbox">
@@ -144,7 +165,7 @@
         </div><!--catfilter-cont-->
       </div><!--catfilter-it-->
       <div class="catfilter-it">
-        <a href="#" class="catfilter-tit hide">Вес одного кроссовка, г</a>
+        <a href="#" class="catfilter-tit hide">Вид спорта</a>
         <div class="catfilter-cont hide">
          <label class="catfilter-lbl">
           <input type="checkbox">
@@ -152,24 +173,15 @@
         </label>
       </div><!--catfilter-cont-->
     </div><!--catfilter-it-->
-    <div class="catfilter-it">
-      <a href="#" class="catfilter-tit hide">Вид спорта</a>
-      <div class="catfilter-cont hide">
-       <label class="catfilter-lbl">
-        <input type="checkbox">
-        <span>Межсезонье</span>
-      </label>
-    </div><!--catfilter-cont-->
-  </div><!--catfilter-it-->
 
-  <div class="catfilter-actions">
-    <button class="btn catfilter-btn">Показать</button>
-    <button type="reset" class="btn catfilter-btn-o">Сбросить</button>
-  </div><!--catfilter-actions-->
+    <div class="catfilter-actions">
+      <button class="btn catfilter-btn">Показать</button>
+      <button type="reset" class="btn catfilter-btn-o">Сбросить</button>
+    </div><!--catfilter-actions-->
 
 
 
-</div><!--catfilter-->
+  </div><!--catfilter-->
 </div>
 <div class="catalog-col-r">
   <div class="catalog-items">
@@ -418,10 +430,12 @@
 </div><!--col-r-->
 </div><!--cols-->
 </div><!--catalog-->
+</div><!--cataloglist-inn-->
 </div><!--contain-->
+</div><!--cataloglist-->
 <div class="fivereasons">
   <div class="container">
-    <div class="fivereasons-tit">5 причин купить качественные кроссовки для бега в Fitness-Place.RU</div>
+    <div class="sheading-2">5 причин купить качественные кроссовки для бега в Fitness-Place.RU</div>
     <div class="fivereasons-w">
       <div class="fivereasons-it">
         <div class="fivereasons-img-w">
@@ -471,12 +485,156 @@
     </div><!--fivereasons-w-->
   </div>
 </div><!--fivereasons-->
+<div class="fabout">
+  <div class="container">
+    <div class="sheading-2">Первый спортивный ЗОЖ-гипермаркет FITNESS PLACE</div>
+    <div class="fabout-w">      
+      <div class="fabout-l">
+        <p>Наша цель – мотивировать общество идти по пути здорового образа жизни. Гармония с собой через спорт – это не только улучшение самочувствия, укрепление здоровья и развитие воспитания, но и источник прекрасного настроения. Огромный оффлайновый ЗОЖ магазин. Более 2 000 кв.м. спорта и фитнеса. Помогаем на пути к достижению цели вести здоровый образ жизни. Наши специалисты подбирают не только пару кроссовок, велосипед или тренажер, но и рекомендуют правильное питание.</p>
+        <p>Сервис и обслуживание. Берем ответственность за продукт. Гарантируем постоянную поддержку в сборке обслуживании и хранении оборудования. Качественный продукт и профессиональный комплекс услуг снимают все заботы. Остается только спорт. Онлайн возможности. Вместе даже за тысячи километров. Предоставляем возможность получения любой услуги от покупки до общения в виртуальном мире. В любом точке мира всегда рядом, всегда с тобой.</p>
+      </div>
+      <div class="fabout-r">
+        <img src="img/fabout_1.jpg" alt="image" title="image">
+      </div><!--fabout-r-->
+    </div>
+  </div><!--container-->
+</div><!--fabout-->
 
+<div class="fivereasons">
+  <div class="container">
+    <div class="sheading-2">5 причин купить качественные кроссовки для бега в Fitness-Place.RU</div>
+    <div class="fivereasons-w">
+      <div class="fivereasons-it">
+        <div class="fivereasons-num">1</div>
+        <p>Свыше 150 моделей беговых кроссовок в наличии 
+          в спортивном магазине
+          в Москве <a href="#">с выставочным залом</a> площадью 2000 кв.м.</p>  
+        </div><!--fivereasons-it-->
 
+        <div class="fivereasons-it">
+          <div class="fivereasons-num">2</div>
+          <p>Бесплатная примерка 
+          и пробежка на беговой дорожке прямо в магазине покупкой ежедневно с 9 до 21</p>
+        </div><!--fivereasons-it-->
+
+        <div class="fivereasons-it">
+          <div class="fivereasons-num">3</div>
+          <p>Профессиональная <a href="#">видеоконсультация 
+          по WhatsApp</a> по любым кроссовкам из наличия 
+        в магазине</p>
+      </div><!--fivereasons-it-->
+
+      <div class="fivereasons-it">
+        <div class="fivereasons-num">4</div>
+        <p>Доставка беговых и фитнес кроссовок возможна по всей России через курьерские компании</p>
+      </div><!--fivereasons-it-->
+
+      <div class="fivereasons-it">
+        <div class="fivereasons-num">5</div>
+        <p>На все кроссовки предоставляется <a href="#">официальная гарантия</a> от производителя</p>
+      </div><!--fivereasons-it-->
+    </div><!--fivereasons-2-w-->
+  </div><!--cont-->
+</div>
+
+<div class="relateprods">
+  <div class="container">
+    <div class="sheading-2">Персональные рекомендации</div>
+    <div class="relateprods-container-w">
+      <div class="relateprods-container swiper-container">
+        <div class="relateprods-wrapper swiper-wrapper">
+
+          <div class="relateprods-item swiper-slide">
+            @@include('var/_relate-item.html',
+            {
+              "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+              "pricee": "8 843 Р",
+              "oldpricee": "",
+              "imagee": "sneaker-2.jpg",
+              "availability": "<div class='sproduct-availability'>в наличии</div>",
+              "salee": "",
+              "payy": "от 348 Р в мес.<a href='#' class='sproduct-pay-info'></a>"
+            })
+          </div>
+          <div class="relateprods-item swiper-slide">
+            @@include('var/_relate-item.html',
+            {
+              "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+              "pricee": "8 843 Р",
+              "oldpricee": "11 790 Р",
+              "imagee": "sneaker-3.jpg",
+              "availability": "<div class='sproduct-availability'>в наличии</div>",
+              "salee": "",
+              "payy": ""
+            })               
+          </div><!--relateprods-item-->
+
+          <div class="relateprods-item swiper-slide">
+            @@include('var/_relate-item.html',
+            {
+              "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+              "pricee": "8 843 Р",
+              "oldpricee": "11 790 Р",
+              "imagee": "sneaker-4.jpg",
+              "availability": "<div class='sproduct-availability'>в наличии</div>",
+              "salee": "",
+              "payy": "от 348 Р в мес.<a href='#' class='sproduct-pay-info'></a>"
+            })               
+          </div><!--relateprods-item-->
+
+          <div class="relateprods-item swiper-slide">
+            @@include('var/_relate-item.html',
+            {
+              "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+              "pricee": "8 843 Р",
+              "oldpricee": "11 790 Р",
+              "imagee": "sneaker-1.jpg",
+              "availability": "<div class='sproduct-availability'>в наличии</div>",
+              "salee": "",
+              "payy": "от 348 Р в мес.<a href='#' class='sproduct-pay-info'></a>"
+            })               
+          </div><!--relateprods-item-->
+
+          <div class="relateprods-item swiper-slide">
+            @@include('var/_relate-item.html',
+            {
+              "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+              "pricee": "8 843 Р",
+              "oldpricee": "11 790 Р",
+              "imagee": "sneaker-2.jpg",
+              "availability": "<div class='sproduct-availability'>в наличии</div>",
+              "salee": "",
+              "payy": ""
+            })               
+          </div><!--relateprods-item-->
+
+          <div class="relateprods-item swiper-slide">
+            @@include('var/_relate-item.html',
+            {
+              "title":"Кроссовки мужские Hoka SPEEDGOAT 4",
+              "pricee": "8 843 Р",
+              "oldpricee": "11 790 Р",
+              "imagee": "sneaker-3.jpg",
+              "availability": "<div class='sproduct-availability'>в наличии</div>",
+              "salee": "",
+              "payy": ""
+            })               
+          </div><!--relateprods-item-->
+
+        </div><!--relateprods-wrapper-->
+        <div class="swiper-button swiper-button-next"></div>
+        <div class="swiper-button swiper-button-prev"></div>
+      </div><!--relateprods-container-->
+    </div><!--relateprods-container-w-->
+  </div>
+</div><!--relateprods-->
+@@include('var/_footer.html')
 </div><!--wrapper-->
 
 <script src="js/jquery-3.4.1.min.js"></script>
-<!--script src="js/select2.min.js"></script-->
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/nouislider.js"></script>
+<script src="js/wNumb.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>

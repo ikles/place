@@ -38,31 +38,31 @@
 
 
 body {  
-    &.active {
-        background: url("../img/1920.jpg") no-repeat top -10px center;
-        .wrapper {
-            opacity: 0.4;
-        } 
-        .footer {
-            opacity: 0.4;
-        }
-        .get {
-            opacity: 0.4;
-        }
-    }    
+  &.active {
+    background: url("../img/1.jpg") no-repeat top 0px center;
+    .wrapper {
+      opacity: 0.4;
+    } 
+    .footer {
+      opacity: 0.4;
+    }
+    .get {
+      opacity: 0.4;
+    }
+  }    
 
 
 }
 .eye-3 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 25px;
-    background-color: #ccc;
-    z-index: 100;   
-    -webkit-border-radius: 50%; 
-    border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
+  z-index: 100;   
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
 }
 
 @media (max-width: 640px) {
