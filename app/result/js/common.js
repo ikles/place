@@ -3,7 +3,7 @@ jQuery(document).ready(function( $ ) {
 
   /************************************/
 
-$('.wrapper').prepend('<span class="eye-3"></span>');
+/*$('.wrapper').prepend('<span class="eye-3"></span>');
 let pg = parseInt(document.location.pathname.match(/\d+/))
 $('body').addClass('active').css('background-image', "url('../img/"+pg+".jpg')");
 $('body:not(.active)').css('background-image', "unset");
@@ -15,7 +15,7 @@ $('.eye-3').click(function (e) {
   $('body.active').css('background-image', "url('../img/"+pg+".jpg')");
   $('body:not(.active)').css('background-image', "unset");
 
-});
+});*/
 
 /************************************/
 
@@ -86,20 +86,22 @@ if ( $('.relateprods-container').length ) {
       clickable: true
     },
     breakpoints: {
-      481: {
+      1200: {
         slidesPerView: 5, 
         spaceBetween: 0,
         loop: true,
       },
-
-      200: {   
-        slidesPerView: 1, 
-        spaceBetween: 0,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        }
+      992: {
+        slidesPerView: 4,         
+      },
+      768: {
+        slidesPerView: 3,         
+      },
+      576: {   
+        slidesPerView: 2,
+      },
+      576: {   
+        slidesPerView: 2,
       },
     },
 
