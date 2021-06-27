@@ -20,6 +20,25 @@ $('.eye-3').click(function (e) {
 /************************************/
 
 
+$('.char-prod-gal-min').click(function (e) {
+  e.preventDefault();
+  let imgSrc = $(this).find('img').attr('src');  
+  let bigImgW = $('.char-prod-gal-ph-b');
+  let bigImg = $('.char-prod-gal-ph-b img');
+  bigImgW.removeClass('big-video');
+  $('.char-prod-gal-min').removeClass('act');
+  $(this).addClass('act');
+
+  if ($(this).hasClass('_video')) {
+    bigImg.attr('src', imgSrc);
+    bigImgW.addClass('big-video');
+  }
+  else {    
+    bigImg.attr('src',imgSrc);
+  }
+
+});
+
 
 
 $('.filter-open').click(function (e) {
@@ -109,6 +128,54 @@ if ( $('.relateprods-container').length ) {
 }
 
 
+if($('.card-prod-r-basket-input').length) {
+$('.card-prod-r-basket-input').select2({
+  minimumResultsForSearch: -1
+});    
+}
+
+
+
+if($('.card-prod-r-basket-input-2').length) {
+
+function formatData (data) {
+  if (!data.id) { return data.text; }
+  var $result= $(
+    '<span><img src="../img/russia.jpg"/> ' + data.text + '</span>'
+  );
+  return $result;
+};
+
+$(".card-prod-r-basket-input-2").select2({
+  templateResult: formatData,
+  templateSelection: formatData,
+minimumResultsForSearch: -1
+});
+
+}//if
+
+if ( $(".quick-ord-input").length ) {
+$(".quick-ord-input").mask("+7 999 999-99-99");
+}
+
+
+
+$('.scard-tabs .tabs_control_link').click(function (e) {
+  e.preventDefault();
+
+  var item = $(this).closest('.scard-tabs .tabs_control_item'),
+  contentItem = $('.scard-tabs .tabs_content_item'),
+  itemPosition = item.index();
+
+  contentItem.eq(itemPosition)
+  .add(item)
+  .addClass('active')
+  .siblings()
+  .removeClass('active');
+
+});
+
+
 }); //ready
 
 
@@ -164,6 +231,7 @@ function setPriceValues() {
 
 
   } //spV
-
-
 }// if priceSlider
+
+
+
