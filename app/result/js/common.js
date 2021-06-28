@@ -80,8 +80,8 @@ $('.catfilter-it').each(function () {
   });
 });
 
-if ( $('.relateprods-container').length ) {
-  new Swiper('.relateprods-container', {
+if ( $('.relateprods-container-1').length ) {
+  new Swiper('.relateprods-container-1', {
 
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -110,6 +110,58 @@ if ( $('.relateprods-container').length ) {
         spaceBetween: 0,
         loop: true,
       },
+      992: {
+        slidesPerView: 4,         
+      },
+      768: {
+        slidesPerView: 3,         
+      },
+      576: {   
+        slidesPerView: 2,
+      },
+      576: {   
+        slidesPerView: 2,
+      },
+    },
+
+  });
+}
+-2
+if ( $('.relateprods-container-2').length ) {
+  new Swiper('.relateprods-container-2', {
+
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      //перетаскивать скролл мышью
+      draggable: true
+    },
+    slidesPerView: 1,
+    //перетаскивание на пк
+    simulateTouch: true,
+    //чувствительность свайпа
+    touchRatio: 1,
+    //угол срабатывания свайпа
+    touchAngle: 45,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      1517: {
+        slidesPerView: 6, 
+        spaceBetween: 0,
+        loop: true,
+      },
+      1200: {
+        slidesPerView: 5, 
+        spaceBetween: 0,
+        loop: true,
+      },      
       992: {
         slidesPerView: 4,         
       },

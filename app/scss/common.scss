@@ -7167,8 +7167,7 @@ input.btn {
 
 .cat-title-wrap {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between;  
   margin-bottom: 15px;
   line-height: 1;
 }
@@ -7187,7 +7186,9 @@ input.btn {
   background-position: left top;
   width: 20px;
   height: 20px;
-  display: block;
+  display: flex;
+  flex: none;
+  margin-top: 14px;
 }
 
 .sproduct-reviews-row {
@@ -7566,4 +7567,79 @@ button {
   &.active {
     display: flex;
   }
+}
+
+.relateprods-item .catalog-item {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.relateprods-container-w {
+    position: relative;
+    margin-top: -5px;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.relateprods-container-w:after {
+    content: "";
+    display: block;
+    background: url('../img/relate_light.png') no-repeat right top;
+    height: 100%;
+    width: 109px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.relateprods .swiper-button-next {
+    right: 0px;
+}
+
+.relateprods {
+  .swiper-button {
+    width: 48px;
+    height: 48px;
+    box-shadow: -3px 1px 6px 0px rgba(#000, 0.05);
+    border-radius: 50%;
+    background: #fff url('../img/nav-arrow-2.png') no-repeat center;
+    position: absolute;
+    top: 164px;
+    top: calc(50% - 21px);
+    z-index: 14;
+    &:after {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+
+.fivereasons-inn, .fabout-inn, .relateprods-inn {
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.relateprods-container {
+    position: static $i;
+}
+
+
+.sheading-2 {
+  font-size: 30px;
+  line-height: 2.3;
+  font-weight: 600;
+  color: #313130;
+  margin-bottom: 5px;
+}
+
+@media (max-width : 1516px) {
+.sheading-2 {
+  line-height: 1.2;
+}
+
 }
