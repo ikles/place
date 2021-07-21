@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карточка товара</title>    
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="css/card.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div class="wrapper">
+    
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-inner">
+              <div class="btn-mobile-menu">
+                <button type="button"><span></span></button>
+              </div>
+              <div class="top-menu">
+                <ul class="top-menu__list">
+                  <li class="top-menu__item top-menu__item_sale"><a class="top-menu__link" href="#">
+                    <svg class="icon icon-flash">
+
+                      <use xlink:href="img/icons/sprite/svg-sprite.svg#flash"></use>
+                    </svg><span>Акции и скидки</span></a></li>
+                    <li class="top-menu__item"><a class="top-menu__link" href="#"><span>Оплата и доставка</span></a></li>
+                    <li class="top-menu__item"><a class="top-menu__link" href="#"><span>Советы по подбору</span></a></li>
+                    <li class="top-menu__item"><a class="top-menu__link" href="#"><span>Бренды</span></a></li>
+                    <li class="top-menu__item"><a class="top-menu__link" href="#"><span>Контакты</span></a></li>
+                  </ul>
+                </div>
+                <div class="icon-menu">
+                  <ul class="icon-menu__list">
+                    <li class="icon-menu__item"><a class="icon-menu__link" href="#" data-quantity="14">
+                      <svg class="icon icon-cart icon-menu__icon">
+                        <use xlink:href="img/icons/sprite/svg-sprite.svg#cart"></use>
+                      </svg><span class="icon-menu__qnt">14</span></a></li>
+                      <li class="icon-menu__item"><a class="icon-menu__link" href="#">
+                        <svg class="icon icon-weight-scale icon-menu__icon">
+                          <use xlink:href="img/icons/sprite/svg-sprite.svg#weight-scale"></use>
+                        </svg></a></li>
+                        <li class="icon-menu__item"><a class="icon-menu__link" href="#" data-quantity="29">
+                          <svg class="icon icon-favourite icon-menu__icon">
+                            <use xlink:href="img/icons/sprite/svg-sprite.svg#favourite"></use>
+                          </svg><span class="icon-menu__qnt">29</span></a></li>
+                          <li class="icon-menu__item"><a class="icon-menu__link" href="#">
+                            <svg class="icon icon-user icon-menu__icon">
+                              <use xlink:href="img/icons/sprite/svg-sprite.svg#user"></use>
+                            </svg></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__middle">
+                    <div class="container">
+                      <div class="header__middle-inner"><a class="header__logo" href="#">
+
+
+<picture>
+  <source srcset="img/design/logo.png" type="image/jpeg" media="(min-width:991px)" />  
+  <source srcset="img/design/logo3.png" type="image/jpeg" media="(min-width:767px)" />
+  <source srcset="img/design/logo4.png" type="image/jpeg" media="(min-width:200px)" />  
+  <img src="img/design/logo2.png">
+</picture>
+                        
+                      </a>
+                        <div class="header__location">
+                          <div class="header__city"><a class="header__city-current" href="#">
+                            <svg class="icon icon-location-marker ">
+                              <use xlink:href="img/icons/sprite/svg-sprite.svg#location-marker"></use>
+                            </svg><span>Екатеринбург</span></a></div>
+                            <div class="header__delivery">
+                              <svg class="icon icon-delivery ">
+                                <use xlink:href="img/icons/sprite/svg-sprite.svg#delivery"></use>
+                              </svg><span>Бесплатная доставка на&nbsp;заказы от&nbsp;20 000 руб.</span>
+                            </div>
+                          </div>
+                          <button class="btn-mobile-search" type="button">
+                            <svg class="icon icon-search btn-mobile-search__icon">
+                              <use xlink:href="img/icons/sprite/svg-sprite.svg#search"></use>
+                            </svg>
+                          </button>
+                          <div class="header__search">
+                            <form class="form-header-search" id="form-header-search" action="#">
+                              <div class="form-header-search__inner">
+                                <input class="form-header-search__input" type="text" name="q" aria-label="Поиск" placeholder="Поиск по 2500 товарам">
+                                <button class="form-header-search__submit" type="submit" name="s">
+                                  <svg class="icon icon-search form-header-search__submit-icon">
+                                    <use xlink:href="img/icons/sprite/svg-sprite.svg#search"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="header__phones">
+                            <div class="header__phone"><a href="tel:88009304636">8 800 930 46 36</a></div>
+                            <div class="header__phone"><a href="tel:+74959304636">+7 495 930 46 36</a></div><a class="header__call-link" href="javascript:void(0)">Обратный звонок</a>
+                          </div>
+                          <div class="header__address"><span>Москва, Каширское шоссе, д.19, к.1,</span><span>ТЦ Каширский двор, <a href="">схема проезда</a></span><span class="color_gray">Пн-вс: с 9:00 до 21:00</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header__bottom">
+                      <div class="container">
+                        <div class="header__bottom-inner">
+                          <div class="main-menu">
+                            <ul class="main-menu__list">
+                              <li class="main-menu__item"><a class="main-menu__link" href="#"><span>Велосипеды</span></a></li>
+                              <li class="main-menu__item"><a class="main-menu__link" href="#"><span>Тренажеры</span></a></li>
+                              <li class="main-menu__item"><a class="main-menu__link" href="#"><span>Одежда</span></a></li>
+                              <li class="main-menu__item"><a class="main-menu__link" href="#"><span>Обувь</span></a></li>
+                              <li class="main-menu__item"><a class="main-menu__link" href="#"><span>Спортивное питание</span></a></li>
+                              <li class="main-menu__item main-menu__item_sale"><a class="main-menu__link" href="#">
+                                <svg class="icon icon-percent ">
+                                  <use xlink:href="img/icons/sprite/svg-sprite.svg#percent"></use>
+                                </svg><span>Распродажа</span></a></li>
+                                <li class="main-menu__item"><a class="main-menu__link" href="#"><span>3D тур по магазину</span></a></li>
+                              </ul>
+                            </div>
+                            <div class="main-menu-mobile"><a class="btn btn_size_s main-menu-mobile__link" href="#">Каталог</a><a class="btn btn_size_s btn_color_black main-menu-mobile__link" href="#">3D тур</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mobile-nav">
+                        <div class="container">
+                          <div class="mobile-nav__inner">
+                            <div class="mobile-menu">
+                              <p class="mobile-menu__title">Каталог</p>
+                              <ul class="mobile-menu__list">
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Велосипеды</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Тренажеры</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Одежда</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Обувь</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Спортивное питание</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Бренды</a></li>
+                              </ul>
+                            </div>
+                            <div class="mobile-menu">
+                              <p class="mobile-menu__title">Сервисы</p>
+                              <ul class="mobile-menu__list">
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Веломастерская</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Gait-анализ</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Онлайн-подбор</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Тест-драйв</a></li>
+                              </ul>
+                            </div>
+                            <div class="mobile-menu">
+                              <p class="mobile-menu__title">Покупателям</p>
+                              <ul class="mobile-menu__list">
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Акции и скидки</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Гарантии</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Оплата и доставка</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Оферта</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">База знаний</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Блог</a></li>
+                                <li class="mobile-menu__item"><a class="mobile-menu__link" href="#">Новости</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </header>
+
+    <div class="card-page">
+      <div class="advants">
+        <div class="container">
+          <div class="advants-w">
+            <div class="advant">                
+              <div class="advant-img"><img src="img/advant_1.png" /></div>
+              <div class="advant-txt">
+                Бесплатная<br />
+                доставка и сборка<br />
+                от 20 000 рублей                  
+              </div>
+            </div>
+            <div class="advant">                
+              <div class="advant-img"><img src="img/advant_2.png" /></div>
+              <div class="advant-txt">
+               Тест-драйв в шоу-руме –<br>
+               сделайте осознанный <br>
+               выбор!                 
+             </div>
+           </div>
+           <div class="advant">              
+            <div class="advant-img"><img src="img/advant_3.png" /></div>
+            <div class="advant-txt">
+              Бесплатный Gait-анализ <br>
+              при выборе кроссовок                
+            </div>
+          </div>
+          <div class="advant">              
+            <div class="advant-img"><img src="img/advant_4.png" /></div>
+            <div class="advant-txt">
+             Подарки к каждой <br>
+             покупке!               
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+
+   <div class="scard">          
+    <div class="container">
+      <div class="padding_22">
+        <div class="bread">
+          <ul class="bread-ul">
+            <li class="bread-li"><a href="#" class="bread-a">Главная</a></li>
+            <li class="bread-li"><a href="#" class="bread-a">Каталог</a></li>
+            <li class="bread-li"><span class="bread-span">Обувь</span></li>
+          </ul>
+        </div>
+
+
+        <div class="scard-card">
+          <div class="cat-title-wrap">
+            <h2 class="cat-title">Кроссовки мужские Nike Air Monarch IV Training Shoe</h2>
+            <a href="#" class="filter-share"></a>
+          </div>
+
+          <div class="scard-info-row">
+
+            <div class="scard-info-char">
+              <span>Код товара:</span> 2102006
+            </div>
+            <div class="sproduct-reviews-row">
+              <div class="sproduct-reviews-stars">
+                <span class="sproduct-reviews-star"></span>
+                <span class="sproduct-reviews-star"></span>
+                <span class="sproduct-reviews-star"></span>
+                <span class="sproduct-reviews-star"></span>
+                <span class="sproduct-reviews-star-o"></span>
+              </div>                  
+              <a href="#" class="sproduct-reviews-lbl">3 отзыва</a>
+            </div>
+          </div>
+
+
+
+
+          <div class="scard-w">
+
+            <div class="scard-col-l">
+
+
+
+
+              <div class="char-prod">
+                <div class="scard-img-col">
+                  <div class="char-prod-gal">
+                    <div class="char-prod-gal-img-w">
+                      <a href="#" class="sproduct-sale">-25%</a>
+
+<a href="#" class="sprod-present"></a>
+                      <div class="sproduct-actions">
+                        <a href="#" class="sproduct-compare"></a>
+
+<!--label class="sproduct-compare-lbl">
+  <input type="checkbox">
+  <span></span>
+</label-->
+
+                        <a href="#" class="sproduct-like"></a>
+                      </div>
+                      <a href="#" class="char-prod-gal-ph-b"><img src="img/product_1.jpg" /></a>
+                    </div>                        
+                    <div class="char-prod-gal-row">                          
+                      <a href="#" class="char-prod-gal-min act"><img src="img/product_1.jpg" /></a><a href="#" class="char-prod-gal-min"><img src="img/product-mini-2.jpg" /></a>
+                      <a href="#" class="char-prod-gal-min"><img src="img/product_mini_3.jpg" /></a>
+                      <a href="#" class="char-prod-gal-min _video">
+                        <img src="img/video-product.jpeg" class="char-prod-gal-min-img" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="char-prod-inf">
+                  <div class="scard-size">
+                    <div class="scard-size-lbl">Размер</div>
+                    <ul class="scard-size-ul">
+                      <li class="scard-size-li"><a href="#" class="scard-size-a act">RUS</a></li>
+                      <li class="scard-size-li"><a href="#" class="scard-size-a">EUR</a></li>
+                      <li class="scard-size-li"><a href="#" class="scard-size-a">US</a></li>
+                      <li class="scard-size-li"><a href="#" class="scard-size-a">UK</a></li>
+                    </ul>
+                  </div>
+
+
+
+                  <div class="scard-size2">
+                    <div class="sproduct-color-lbls">
+                     <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>36,5</span>
+                    </label>
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>37</span>
+                    </label>
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>37,5</span>
+                    </label>
+
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size" checked>
+                      <span>38</span>
+                    </label>
+
+                    <span class="sproduct-size-dis">38,5</span>
+
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>39</span>
+                    </label>
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>39,5</span>
+                    </label>                  
+
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>40</span>
+                    </label>
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>40,5</span>
+                    </label>                  
+
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>41</span>
+                    </label>
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>42</span>
+                    </label>
+                    <label class="sproduct-color-lbl2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
+                      <span>42,5</span>
+                    </label>                  
+                  </div>
+                </div>
+                <div class="scard-p">38 размер - длина стельки: 25 см</div>
+
+
+                <div class="scard-colors">
+                  <div class="scard-colors-tit">Цвет:</div>
+                  <div class="sproduct-color-lbls">
+                    <label class="sproduct-color-lbl">
+                      <input type="radio" class="sproduct-color-chb" name="color" checked="">
+                      <span style="background-color: #e01f2e;"></span>
+                      <span class="stolltip">Красный</span>
+                    </label>
+                    <label class="sproduct-color-lbl">
+                      <input type="radio" class="sproduct-color-chb" name="color">
+                      <span style="background-color: #f8d800;"></span>
+                      <span class="stolltip">Желтый</span>
+                    </label>
+                    <label class="sproduct-color-lbl">
+                      <input type="radio" class="sproduct-color-chb" name="color">
+                      <span style="background-color: #a38b6f;"></span>
+                      <span class="stolltip">Светло-коричневый</span>
+                    </label>
+
+                    <label class="sproduct-color-lbl">
+                      <input type="radio" class="sproduct-color-chb" name="color">
+                      <span style="background-color: #b5b5b5;"></span>
+                      <span class="stolltip">Серый</span>
+                    </label>
+                    <label class="sproduct-color-lbl">
+                      <input type="radio" class="sproduct-color-chb" name="color">
+                      <span style="background-color: #000;"></span>
+                      <span class="stolltip">Черный</span>
+                    </label>
+                    <label class="sproduct-color-lbl">
+                      <input type="radio" class="sproduct-color-chb" name="color">
+                      <span style="background-color: #54a02b;"></span>
+                      <span class="stolltip">Зеленый</span>
+                    </label>
+                    <label class="sproduct-color-lbl">
+                      <input type="radio" class="sproduct-color-chb" name="color">
+                      <span style="background-color: #0f75b5;"></span>
+                      <span class="stolltip">Синий</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="scard-p">Кроссовки Asics DynaFlyte 4 – это универсальные беговые <br>кроссовки с 8-миллиметровым профилем.</div>
+                <table class="scard-tbl">
+                  <tr>
+                    <td>
+                      <div class="dots"><span> Пол </span></div>
+                    </td>
+                    <td>Женский</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="dots"><span>Сезон одежды и обуви</span></div>
+                    </td>
+                    <td>Лето</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="dots"><span>Пронация</span></div>
+                    </td>
+                    <td>Нейтральная</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="dots"><span>  Вид спорта</span></div>
+                    </td>
+                    <td>Бег</td>
+                  </tr>
+
+                </table>
+                <a href="#" class="scard-all-link">Все характеристики</a>
+                <a href="#" class="instr-download"><img src="img/pdf-icon.png" class="instr-download-img" /><span class="instr-download-span-1">Инструкция</span><span class="instr-download-span-2">Скачать</span></a>
+                <a href="#" class="get-consult">
+                  <span class="get-consult-span">
+                    <img src="img/whatsapp_logo_126.png" class="get-consult-img-1" />
+                    <span>Получить видео-консультацию</span>
+                    <img src="img/notebook_w.png" class="get-consult-img-2" /></span>
+                  </a>
+                </div>
+              </div>
+              <div class="presents">
+                <div class="presents-tit">Подарки на выбор при оформлении заказа</div>
+                <div class="presents-w">
+                  <div class="presents-it">
+                    <div class="presents-img-w"><img src="img/presents_1.jpg" /></div>
+                    <div class="presents-txts">
+                      <a href="#" class="presents-txt-1">Медальница Fitness Place</a>
+                      <div class="presents-txt-2">в наличии</div>
+                    </div>
+                  </div>
+                  <div class="presents-it">
+                    <div class="presents-img-w"><img src="img/presents_2.png" /></div>
+                    <div class="presents-txts">
+                      <a href="#" class="presents-txt-1">Бутылка (фляга) для воды Fitness Place 650мл</a>
+                      <div class="presents-txt-2">в наличии</div>
+                    </div>
+                  </div>
+                  <div class="presents-it">
+                    <div class="presents-img-w"><img src="img/presents_1.jpg" /></div>
+                    <div class="presents-txts">
+                      <a href="#" class="presents-txt-1">Медальница Fitness Place</a>
+                      <div class="presents-txt-2">в наличии</div>
+                    </div>
+                  </div>
+                  <div class="presents-it presents-it-2">
+                    <div class="presents-img-w"><img src="img/presents_4.jpg" /></div>
+                    <div class="presents-txts">
+                      <a href="#" class="presents-txt-1">Гейт анализ</a>
+                      <div class="presents-txt-2">услуга</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+
+            </div><!--scard-col-l-->
+
+            <div class="scard-col-r">
+              <div class="card-prod-r">
+                <div class="card-prod-r-w">
+                  <div class="stock-price">
+                    <div class="stock-price-txt">Цена:</div>
+                    <div class="stock-price-txt-2"><span class="stock-price-span">span</span>в наличии</div>
+                  </div>
+                  <div class="card-prod-r-txt-1">12 299 Р</div>
+                  <div class="card-prod-r-txt-2">10 546 Р</div>
+                  <div class="bonus-w">
+                    <a href="#" class="bonus-row">
+                      <div class="bonus-log"><img src="img/logo_bonus_1.png" class="" /></div>
+                      <div class="bonus-txt">2 748 бонусов</div>
+                    </a>
+                    <a href="#" class="bonus-row">
+                      <div class="bonus-log"><img src="img/logo_bonus_2.png" class="" /></div>
+                      <div class="bonus-txt">2 635 бонусов</div>
+                    </a>
+                  </div>
+                  <div class="card-prod-disc"><span class="card-prod-disc-span">Скидка 2%</span>при оплате картой'на сайте</div>
+                  <div class="card-prod-choice-w">
+                    <div class="card-prod-choice-txt-1">Вы выбрали:</div>
+                    <div class="card-prod-choice-info">
+                      <div class="card-prod-choice-row-info">
+                        <span class="card-prod-choice-span"></span>
+                        <div class="card-prod-choice-txt-2">Розовый цвет</div>
+                      </div>
+                      <div class="card-prod-choice-txt-2">38 размер (Европейский)</div>
+                      <div class="card-prod-choice-txt-2">
+                        Длина стельки - 25 см
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-prod-r-basket">
+                    <div class="scard-select">
+                      <select class="card-prod-r-basket-input">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>                
+                    </div>
+
+                    <button class="card-prod-r-basket-btn btn">В корзину</button>
+                  </div>
+                  <div class="card-prod-r-del">
+                    <div class="card-prod-r-del-txt-1">Доставка</div>
+                    <div class="del-row-txt-1"><a href="#" class="del-row-a"> Екатеринбург</a> – от 378 Р</div>
+                    <div class="del-row-txt-1">Ближайшая – 30.03.2021</div>
+                    <div class="del-row-txt-2">Продавец<span class="del-row-txt-1-span">Neotren</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="quick-ord">
+                <div class="quick-ord-w">
+                  <div class="quick-ord-txt">Быстрый заказ</div>
+
+
+                  <div class="city-post-code-w">
+                    <div class="scard-select scard-select-2">
+                      <select class="card-prod-r-basket-input-2">
+                        <option value="rus"></option>
+                        <option value="bel"></option>
+                        <option value="ukr"></option>
+                      </select>                
+                    </div>
+                    <input class="quick-ord-input" type="text" placeholder="+7 ___ ___ - __ - __" />
+                  </div>                
+
+                  <button class="quick-ord-btn btn">Отправить</button>
+                </div>
+              </div>
+            </div>
+
+          </div><!--scard-row-w-->
+        </div>
+
+        <div class="scard-set-tabs">
+          <div class="contain">
+            <div class="scard-set">
+              <div class="scard-set-tit">Данный товар в комплекте</div>
+
+
+
+
+
+              <div class="scard-set-w">
+                <div class="scard-set-l">
+
+                  <div class="scard-set-products">
+
+                    <div class="catalog-item">
+                      <div class="sproduct-cont-1">
+                        <div href="#" class="sproduct-top">
+                          <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-44.jpg"></a>
+                        </div>
+                        <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+                        <div class="sproduct-pay">от 348 Р в мес.<a href="#" class="sproduct-pay-info"></a></div>
+                        <div class="sproduct-price-row">
+                          <span class="sproduct-price">8 843 Р</span>
+                          <!--span class="sproduct-price-old">11 790 Р</span-->
+                          <a href="#" class="sproduct-watsupp"></a>
+                        </div>
+                        <div class="sproduct-availability">в наличии</div>
+                      </div><!--cont-1-->
+                    </div><!--item-->
+
+                    <div class="catalog-item">
+                      <div class="sproduct-cont-1">
+                        <div href="#" class="sproduct-top">
+                          <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-55.jpg"></a>
+                        </div>
+                        <a href="#" class="sproduct-title">Кроссовки женские ASICS GEL-EXCITE 6 TWIST</a>
+                        <div class="sproduct-pay">от 348 Р в мес.<a href="#" class="sproduct-pay-info"></a></div>
+                        <div class="sproduct-price-row">
+                          <span class="sproduct-price">4 868 Р</span>
+                          <!--span class="sproduct-price-old">11 790 Р</span-->
+                          <a href="#" class="sproduct-watsupp"></a>
+                        </div>
+                        <div class="sproduct-availability">в наличии</div>
+                      </div><!--cont-1-->
+                    </div><!--item-->
+
+                    <div class="catalog-item">
+                      <div class="sproduct-cont-1">
+                        <div href="#" class="sproduct-top">
+                          <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-66.jpg"></a>
+                        </div>
+                        <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+                        <div class="sproduct-pay">от 348 Р в мес.<a href="#" class="sproduct-pay-info"></a></div>
+                        <div class="sproduct-price-row">
+                          <span class="sproduct-price">8 843 Р</span>
+                          <!--span class="sproduct-price-old">11 790 Р</span-->
+                          <a href="#" class="sproduct-watsupp"></a>
+                        </div>
+                        <div class="sproduct-availability">в наличии</div>
+                      </div><!--cont-1-->
+                    </div><!--item-->
+
+
+                  </div>
+
+                  <div class="scard-p">Недорогое, но эффективное решение для домашнего фитнеса. Включает в себя силовой комплекс, беговую дорожку, спортпитание на месяц и одежду для фитнеса (размер на выбор).</div>
+                  <div class="scard-set-description">
+                    <div class="scard-set-description-b">В комплекте:</div>
+                    <div class="scard-set-description-p">GIANT Педали SHREDDER FLAT PEDAL белый Джерси утепленное с длинным рукавом PODIU Компрессионные рукава GIANT COMPRESSION</div>
+                  </div>
+                </div>
+                <div class="scard-set-r">
+                  <div class="scard-set-total">
+                    <div class="quick-ord-txt">Ваша цена за комплект:</div>
+                    <div class="scard-total-price">156 780 Р</div>
+                    <div class="scard-total-txt">Вы экономите <span class="scard-total-span">15 000 руб.</span></div>
+                    <div class="scard-total-txt-2">Обычная цена комплекта:</div>
+                    <div class="scard-total-oldprice">156 780 Р</div>
+                    <button class="total-ord-btn btn">В корзину</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="scard-tabs">
+              <ul class="tabs-control">
+                <li class="tabs_control_item active">
+                  <a href="#" class="tabs_control_link">Описание</a>
+                </li>
+                <li class="tabs_control_item">
+                  <a href="#" class="tabs_control_link">Характеристики</a>
+                </li>
+                <li class="tabs_control_item">
+                  <a href="#" class="tabs_control_link">Отзывы<span class="tabs_control_link-span">3</span></a>
+                </li>
+                <li class="tabs_control_item">
+                  <a href="#" class="tabs_control_link">Статьи о товаре<span class="tabs_control_link-span">7</span></a>
+                </li>
+                <li class="tabs_control_item">
+                  <a href="#" class="tabs_control_link">Фотографии от пользователей</a>
+                </li>
+                <li class="tabs_control_item">
+                  <a href="#" class="tabs_control_link">Лицензии и сертификаты</a>
+                </li>
+              </ul>
+              <ul class="tabs_content">
+                <li class="tabs_content_item active">
+                  <div class="tabs_content_item-p">
+                    Это универсальный гравийный байк для тех, кто не любит ограничивать себя трассой и не против промчать на своём байке по легкий пересечённой местности. Прочная и легкая рама, сделанная по технологии ALUXX-Grade
+                    Aluminum. Универсальная гравийная геометрия, которая обеспечит отличный контроль и управление велосипедом. За качество переключения скоростей здесь отвечает фирма Shimano и её шоссейная группа Sora.
+                  </div>
+                  <div class="tabs_content_item-p">
+                    Механические дисковые тормоза Tektro MD-C550 обеспечат надежное и плавное торможение. Система FSA Vero Pro даст отличную жесткость и передачу усилия на трансмиссию. Фирменный вилсет Giant S-X2 в сочетании с
+                    толстыми покрышками Giant CrossCut, обеспечат хорошим накатом и сцеплением.
+                  </div>
+                </li>
+                <li class="tabs_content_item">
+                  <p>Механические дисковые тормоза Tektro MD-C550 обеспечат надежное и плавное торможение. Система FSA Vero Pro даст отличную жесткость и передачу усилия на трансмиссию. Фирменный вилсет Giant S-X2 в сочетании с
+                  толстыми покрышками Giant CrossCut, обеспечат хорошим накатом и сцеплением.</p>
+                </li>
+                <li class="tabs_content_item">
+                  <div class="tabs_content_item-p">
+                    Это универсальный гравийный байк для тех, кто не любит ограничивать себя трассой и не против промчать на своём байке по легкий пересечённой местности. Прочная и легкая рама, сделанная по технологии ALUXX-Grade
+                    Aluminum. Универсальная гравийная геометрия, которая обеспечит отличный контроль и управление велосипедом. За качество переключения скоростей здесь отвечает фирма Shimano и её шоссейная группа Sora.
+                  </div>                  
+                </li>
+                <li class="tabs_content_item">
+                  <p>Механические дисковые тормоза Tektro MD-C550 обеспечат надежное и плавное торможение. Система FSA Vero Pro даст отличную жесткость и передачу усилия на трансмиссию. Фирменный вилсет Giant S-X2 в сочетании с
+                  толстыми покрышками Giant CrossCut, обеспечат хорошим накатом и сцеплением.</p>
+                </li>
+                <li class="tabs_content_item">
+                  <div class="tabs_content_item-p">
+                    Это универсальный гравийный байк для тех, кто не любит ограничивать себя трассой и не против промчать на своём байке по легкий пересечённой местности. Прочная и легкая рама, сделанная по технологии ALUXX-Grade
+                    Aluminum. Универсальная гравийная геометрия, которая обеспечит отличный контроль и управление велосипедом. За качество переключения скоростей здесь отвечает фирма Shimano и её шоссейная группа Sora.
+                  </div>
+                  <div class="tabs_content_item-p">
+                    Механические дисковые тормоза Tektro MD-C550 обеспечат надежное и плавное торможение. Система FSA Vero Pro даст отличную жесткость и передачу усилия на трансмиссию. Фирменный вилсет Giant S-X2 в сочетании с
+                    толстыми покрышками Giant CrossCut, обеспечат хорошим накатом и сцеплением.
+                  </div>
+                </li>
+                <li class="tabs_content_item">
+                  <p>Механические дисковые тормоза Tektro MD-C550 обеспечат надежное и плавное торможение. Система FSA Vero Pro даст отличную жесткость и передачу усилия на трансмиссию. Фирменный вилсет Giant S-X2 в сочетании с
+                  толстыми покрышками Giant CrossCut, обеспечат хорошим накатом и сцеплением.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div><!--scard-row-->
+  </div>
+
+</div>
+
+
+<div class="relateprods relateprods-2">
+  <div class="container">
+    <div class="relateprods-inn">
+      <div class="sheading-2">Персональные рекомендации</div>
+      <div class="relateprods-container-w">
+        <div class="relateprods-container relateprods-container-2 swiper-container">
+          <div class="relateprods-wrapper swiper-wrapper">
+
+            <div class="relateprods-item swiper-slide">
+              <div class="catalog-item">
+  <div class="sproduct-cont-1">
+    <div href="#" class="sproduct-top">
+      <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-2.jpg" /></a>
+      <a href="#" class="sproduct-sale"></a>
+      <div class="sproduct-actions">
+        <a href="#" class="sproduct-compare"></a>
+        <a href="#" class="sproduct-like"></a>
+      </div>
+    </div>
+    <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+    <div class="sproduct-pay">
+      от 348 Р в мес.<a href='#' class='sproduct-pay-info'></a>      
+    </div>
+    <div class="sproduct-price-row">
+      <span class="sproduct-price">8 843 Р</span>
+      <span class="sproduct-price-old"></span>
+      <a href="#" class="sproduct-watsupp"></a>
+    </div>
+    <div class='sproduct-availability'>в наличии</div>
+  </div><!--cont-1-->
+</div><!--item-->
+            </div>
+            <div class="relateprods-item swiper-slide">
+              <div class="catalog-item">
+  <div class="sproduct-cont-1">
+    <div href="#" class="sproduct-top">
+      <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-3.jpg" /></a>
+      <a href="#" class="sproduct-sale"></a>
+      <div class="sproduct-actions">
+        <a href="#" class="sproduct-compare"></a>
+        <a href="#" class="sproduct-like"></a>
+      </div>
+    </div>
+    <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+    <div class="sproduct-pay">
+            
+    </div>
+    <div class="sproduct-price-row">
+      <span class="sproduct-price">8 843 Р</span>
+      <span class="sproduct-price-old">11 790 Р</span>
+      <a href="#" class="sproduct-watsupp"></a>
+    </div>
+    <div class='sproduct-availability'>в наличии</div>
+  </div><!--cont-1-->
+</div><!--item-->               
+            </div><!--relateprods-item-->
+
+            <div class="relateprods-item swiper-slide">
+              <div class="catalog-item">
+  <div class="sproduct-cont-1">
+    <div href="#" class="sproduct-top">
+      <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-4.jpg" /></a>
+      <a href="#" class="sproduct-sale"></a>
+      <div class="sproduct-actions">
+        <a href="#" class="sproduct-compare"></a>
+        <a href="#" class="sproduct-like"></a>
+      </div>
+    </div>
+    <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+    <div class="sproduct-pay">
+      от 348 Р в мес.<a href='#' class='sproduct-pay-info'></a>      
+    </div>
+    <div class="sproduct-price-row">
+      <span class="sproduct-price">8 843 Р</span>
+      <span class="sproduct-price-old">11 790 Р</span>
+      <a href="#" class="sproduct-watsupp"></a>
+    </div>
+    <div class='sproduct-availability'>в наличии</div>
+  </div><!--cont-1-->
+</div><!--item-->               
+            </div><!--relateprods-item-->
+
+            <div class="relateprods-item swiper-slide">
+              <div class="catalog-item">
+  <div class="sproduct-cont-1">
+    <div href="#" class="sproduct-top">
+      <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-1.jpg" /></a>
+      <a href="#" class="sproduct-sale"></a>
+      <div class="sproduct-actions">
+        <a href="#" class="sproduct-compare"></a>
+        <a href="#" class="sproduct-like"></a>
+      </div>
+    </div>
+    <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+    <div class="sproduct-pay">
+      от 348 Р в мес.<a href='#' class='sproduct-pay-info'></a>      
+    </div>
+    <div class="sproduct-price-row">
+      <span class="sproduct-price">8 843 Р</span>
+      <span class="sproduct-price-old">11 790 Р</span>
+      <a href="#" class="sproduct-watsupp"></a>
+    </div>
+    <div class='sproduct-availability'>в наличии</div>
+  </div><!--cont-1-->
+</div><!--item-->               
+            </div><!--relateprods-item-->
+
+            <div class="relateprods-item swiper-slide">
+              <div class="catalog-item">
+  <div class="sproduct-cont-1">
+    <div href="#" class="sproduct-top">
+      <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-2.jpg" /></a>
+      <a href="#" class="sproduct-sale"></a>
+      <div class="sproduct-actions">
+        <a href="#" class="sproduct-compare"></a>
+        <a href="#" class="sproduct-like"></a>
+      </div>
+    </div>
+    <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+    <div class="sproduct-pay">
+            
+    </div>
+    <div class="sproduct-price-row">
+      <span class="sproduct-price">8 843 Р</span>
+      <span class="sproduct-price-old">11 790 Р</span>
+      <a href="#" class="sproduct-watsupp"></a>
+    </div>
+    <div class='sproduct-availability'>в наличии</div>
+  </div><!--cont-1-->
+</div><!--item-->               
+            </div><!--relateprods-item-->
+
+            <div class="relateprods-item swiper-slide">
+              <div class="catalog-item">
+  <div class="sproduct-cont-1">
+    <div href="#" class="sproduct-top">
+      <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-3.jpg" /></a>
+      <a href="#" class="sproduct-sale"></a>
+      <div class="sproduct-actions">
+        <a href="#" class="sproduct-compare"></a>
+        <a href="#" class="sproduct-like"></a>
+      </div>
+    </div>
+    <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+    <div class="sproduct-pay">
+            
+    </div>
+    <div class="sproduct-price-row">
+      <span class="sproduct-price">8 843 Р</span>
+      <span class="sproduct-price-old">11 790 Р</span>
+      <a href="#" class="sproduct-watsupp"></a>
+    </div>
+    <div class='sproduct-availability'>в наличии</div>
+  </div><!--cont-1-->
+</div><!--item-->               
+            </div><!--relateprods-item-->
+
+          </div><!--relateprods-wrapper-->
+          <div class="swiper-button swiper-button-next"></div>
+          <div class="swiper-button swiper-button-prev"></div>
+        </div><!--relateprods-container-->
+      </div><!--relateprods-container-w-->
+    </div>
+  </div>
+</div><!--relateprods-->
+
+
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="container">
+            <div class="footer__top-inner">
+              <div class="footer__nav">
+                <div class="footer-menu"><a class="footer-menu__title" href="#">Каталог</a>
+                  <ul class="footer-menu__list">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Велосипеды</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Тренажеры</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Одежда</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Обувь</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Спортивное питание</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Бренды</a></li>
+                  </ul>
+                </div>
+                <div class="footer-menu"><a class="footer-menu__title" href="#">Сервисы</a>
+                  <ul class="footer-menu__list">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Веломастерская</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Gait-анализ</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Онлайн-подбор</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Тест-драйв</a></li>
+                  </ul>
+                </div>
+                <div class="footer-menu"><a class="footer-menu__title" href="#">Покупателям</a>
+                  <ul class="footer-menu__list">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Акции и скидки</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Гарантии</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Оплата и доставка</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Оферта</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">База знаний</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Блог</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="#">Новости</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__info">
+                <div class="footer__info-row">
+                  <div class="footer__paysystems">
+                    <div class="footer__paysystem"><img src="img/design/visa.svg" alt="Visa"></div>
+                    <div class="footer__paysystem"><img src="img/design/mastercard.svg" alt="Mastercard"></div>
+                    <div class="footer__paysystem"><img src="img/design/mir.svg" alt="Мир"></div>
+                    <div class="footer__paysystem"><img src="img/design/sber.png" alt="Покупай с Сбером"></div>
+                  </div>
+                  <div class="footer__contacts"><span>Москва, Каширское шоссе, д.19, к.1,</span><span>ТЦ Каширский двор</span><span class="color_gray">Пн-вс: с 9:00 до 21:00</span><a class="footer__phone" href="tel:+74959304636">+7 495 930 46 36</a></div>
+                </div>
+                <div class="footer__info-row">
+                  <div class="social footer__social"><span class="social__title footer__social-title">Мы в соцсетях:</span>
+                    <ul class="social__list">
+                      <li class="social__item"><a class="social__link" href="#">
+                        <svg version="1.1" viewBox="0 0 50 50" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M45,1H5C2.8,1,1,2.8,1,5v40c0,2.2,1.8,4,4,4h40c2.2,0,4-1.8,4-4V5C49,2.8,47.2,1,45,1z" fill="#54769B"></path>
+                          <path d="M26,34c1,0,1-1.4,1-2c0-1,1-2,2-2s2.7,1.7,4,3c1,1,1,1,2,1s3,0,3,0s2-0.1,2-2c0-0.6-0.7-1.7-3-4c-2-2-3-1,0-5c1.8-2.5,3.2-4.7,3-5.3c-0.2-0.6-5.3-1.6-6-0.7c-2,3-2.4,3.7-3,5c-1,2-1.1,3-2,3c-0.9,0-1-1.9-1-3c0-3.3,0.5-5.6-1-6  c0,0-2,0-3,0c-1.6,0-3,1-3,1s-1.2,1-1,1c0.3,0,2-0.4,2,1c0,1,0,2,0,2s0,4-1,4c-1,0-3-4-5-7c-0.8-1.2-1-1-2-1c-1.1,0-2,0-3,0  c-1,0-1.1,0.6-1,1c2,5,3.4,8.1,7.2,12.1c3.5,3.6,5.8,3.8,7.8,3.9C25.5,34,25,34,26,34z" fill="#FFFFFF"></path>
+                        </svg></a></li>
+                        <li class="social__item"><a class="social__link" href="#">
+                          <svg version="1.1" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45,1H5C2.8,1,1,2.8,1,5v40c0,2.2,1.8,4,4,4h40c2.2,0,4-1.8,4-4V5C49,2.8,47.2,1,45,1z" fill="#3A5BA0"></path>
+                            <path d="M32,26l1-5l-5,0v-4c0-1.5,0.8-2,3-2h2v-5c0,0-2,0-4,0c-4.1,0-7,2.4-7,7v4h-5v5h5v14h6V26H32z" fill="#FFFFFF"></path>
+                          </svg></a></li>
+                          <li class="social__item"><a class="social__link" href="#">
+                            <svg version="1.1" viewBox="0 0 50 50" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M45,1H5C2.8,1,1,2.8,1,5v40c0,2.2,1.8,4,4,4h40c2.2,0,4-1.8,4-4V5C49,2.8,47.2,1,45,1z" fill="#527FA3"></path>
+                              <path d="M36,10c0,0-22.5,0-22.5,0c-1.9,0-3.5,1.6-3.5,3.5l0,0c0,0,0,23,0,23c0,1.9,1.6,3.5,3.5,3.5c0,0,23,0,23,0c1.9-0.1,3.5-1.6,3.5-3.5c0,0,0-23,0-23C40,11.6,37.9,10.1,36,10z M25,19.5c3,0,5.5,2.5,5.5,5.5c0,3-2.5,5.5-5.5,5.5  c-3,0-5.5-2.5-5.5-5.5C19.5,22,22,19.5,25,19.5z M36,34c0,1.1-0.9,2-2,2h-9h-9c-1.1,0-2-0.9-2-2V22.5h2.4C16.1,23.3,16,24.1,16,25  c0,5,4,9,9,9s9-4,9-9c0-0.9-0.1-1.7-0.4-2.5H36V34z M36,15v3h0c0,0.5-0.4,1-1,1v0h-3c-0.5,0-1-0.4-1-1h0v-3h0c0,0,0,0,0,0  c0-0.6,0.4-1,1-1h3v0C35.6,14,36,14.5,36,15C36,15,36,15,36,15L36,15z" fill="#FFFFFF"></path>
+                            </svg></a></li>
+                            <li class="social__item"><a class="social__link" href="#">
+                              <svg version="1.1" viewBox="0 0 50 50" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M45,1H5C2.8,1,1,2.8,1,5v40c0,2.2,1.8,4,4,4h40c2.2,0,4-1.8,4-4V5C49,2.8,47.2,1,45,1z" fill="#CF3427"></path>
+                                <path d="M39.7,19c0,0-0.3-2.1-1.2-3c-1.1-1.2-2.4-1.2-3-1.3C31.3,14.5,25,14.5,25,14.5s-6.3,0-10.5,0.3c-0.6,0.1-1.9,0.1-3,1.3c-0.9,0.9-1.2,3-1.2,3s-0.3,2-0.3,4.4v3c0,2.4,0.3,4.5,0.3,4.5s0.3,2.1,1.2,3c1.1,1.2,2.6,1.2,3.3,1.3c2.4,0.2,10.2,0.2,10.2,0.2s6.3,0.1,10.5-0.2c0.6-0.1,1.9-0.1,3-1.3c0.9-0.9,1.2-3,1.2-3s0.3-2.1,0.3-4.5v-3C40,21.1,39.7,19,39.7,19z M21,29v-8l8,4L21,29z" fill="#FFFFFF"></path>
+                              </svg></a></li>
+                            </ul>
+                          </div>
+                          <div class="footer__yamarket-reviews"><img src="img/design/reviews.png" alt=""></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer__bottom">
+                  <div class="container">
+                    <div class="footer__bottom-inner">
+                      <p class="footer__copyright">2020 © Fitness Place , 2021</p>
+                      <p class="footer__slogan">Магазин здорового образа жизни</p><a class="footer__privacy-policy" href="#">Политика компании в отношении обработки персональных данных</a>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+
+
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/nouislider.js"></script>
+<script src="js/wNumb.min.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+

@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />            
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Карточка товара</title>    
+  <link rel='preload' href='fonts/fontawesome-webfont.woff' as='font' type='font/woff' crossorigin />
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link href="css/font-awesome.min.css" type="text/css" data-template-style="true" rel="stylesheet" />
   <link rel="stylesheet" href="css/card.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,8 +22,8 @@
 </head>
 <body>
   <div class="wrapper">
-    
-      <header class="header">
+
+          <header class="header">
         <div class="header__top">
           <div class="container">
             <div class="header__top-inner">
@@ -65,7 +68,17 @@
                   </div>
                   <div class="header__middle">
                     <div class="container">
-                      <div class="header__middle-inner"><a class="header__logo" href="#"><img src="img/design/logo.png"></a>
+                      <div class="header__middle-inner"><a class="header__logo" href="#">
+
+
+<picture>
+  <source srcset="img/design/logo.png" type="image/jpeg" media="(min-width:991px)" />  
+  <source srcset="img/design/logo3.png" type="image/jpeg" media="(min-width:767px)" />
+  <source srcset="img/design/logo4.png" type="image/jpeg" media="(min-width:200px)" />  
+  <img src="img/design/logo2.png">
+</picture>
+                        
+                      </a>
                         <div class="header__location">
                           <div class="header__city"><a class="header__city-current" href="#">
                             <svg class="icon icon-location-marker ">
@@ -254,17 +267,30 @@
                     <div class="char-prod-gal-img-w">
                       <a href="#" class="sproduct-sale">-25%</a>
 
-
+                      <a href="#" class="sprod-present"></a>
                       <div class="sproduct-actions">
-                        <a href="#" class="sproduct-compare"></a>
-                        <a href="#" class="sproduct-like"></a>
+
+                        <label class="sproduct-compare-lbl">
+                          <input type="checkbox" name="fav">
+                          <svg id="weight-scale" viewBox="0 0 24 19">
+                            <path d="M19.7 3h-3.8c-.4-2-2-3-3.9-3S8.6 1 8.1 3H4.3l-3.2 8h2.2L5 6.7 7.5 13H0v1c0 2.8 2.2 5 5 5s5-2.2 5-5v-.2L6.5 5h1.7c.4 2 2 3 3.9 3s3.4-1 3.9-3h1.5L15 11h2.2L19 6.5l2.6 6.5H14v1c0 2.8 2.2 5 5 5s5-2.2 5-5v-.2L19.7 3zM5 17c-1.3 0-2.4-1-2.8-2h5.7c-.5 1-1.6 2-2.9 2zm7-11c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm7 11c-1.3 0-2.4-1-2.8-2h5.7c-.5 1-1.6 2-2.9 2z"></path>
+                          </svg>
+                        </label>
+
+                        <label class="sproduct-compare-lbl sproduct-like-lbl">
+                          <input type="checkbox" name="like">
+                          <svg id="favourite" viewBox="0 0 20 18">
+                            <path d="M14.4 2c2 0 3.6 1.6 3.6 3.6s-3.9 6.4-8 9.8c-4.1-3.5-8-7.9-8-9.8C2 3.6 3.6 2 5.6 2 8 2 10 5 10 5s1.9-3 4.4-3m0-2C12.6 0 11 .9 10 2.3 9 .9 7.4 0 5.6 0 2.5 0 0 2.5 0 5.6 0 10 10 18 10 18s10-8 10-12.4C20 2.5 17.5 0 14.4 0z"></path>
+                          </svg>
+                        </label>
                       </div>
-                      <a href="#" class="char-prod-gal-ph-b"><img src="img/product_1.jpg" /></a>
+                      <a data-fancybox="gallery-1" href="img/product_1.jpg" class="char-prod-gal-ph-b"><img src="img/product_1.jpg" /></a>
                     </div>                        
                     <div class="char-prod-gal-row">                          
-                      <a href="#" class="char-prod-gal-min act"><img src="img/product_1.jpg" /></a><a href="#" class="char-prod-gal-min"><img src="img/product-mini-2.jpg" /></a>
-                      <a href="#" class="char-prod-gal-min"><img src="img/product_mini_3.jpg" /></a>
-                      <a href="#" class="char-prod-gal-min _video">
+                      <a href="img/product_1.jpg" class="char-prod-gal-min act"><img src="img/product_1.jpg" /></a>
+                      <a data-fancybox="gallery-1" href="img/product-mini-2.jpg" class="char-prod-gal-min"><img src="img/product-mini-2.jpg" /></a>
+                      <a data-fancybox="gallery-1" href="img/product_mini_3.jpg" class="char-prod-gal-min"><img src="img/product_mini_3.jpg" /></a>
+                      <a data-fancybox="gallery-1" href="https://www.youtube.com/watch?v=Mu6EGANxGsc" class="char-prod-gal-min _video">
                         <img src="img/video-product.jpeg" class="char-prod-gal-min-img" />
                       </a>
                     </div>
@@ -286,53 +312,53 @@
                   <div class="scard-size2">
                     <div class="sproduct-color-lbls">
                      <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>36,5</span>
                     </label>
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>37</span>
                     </label>
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>37,5</span>
                     </label>
 
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2" checked>
+                      <input type="radio" class="sproduct-color-chb2" name="size" checked>
                       <span>38</span>
                     </label>
 
                     <span class="sproduct-size-dis">38,5</span>
 
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>39</span>
                     </label>
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>39,5</span>
                     </label>                  
 
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>40</span>
                     </label>
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>40,5</span>
                     </label>                  
 
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>41</span>
                     </label>
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>42</span>
                     </label>
                     <label class="sproduct-color-lbl2">
-                      <input type="checkbox" class="sproduct-color-chb2">
+                      <input type="radio" class="sproduct-color-chb2" name="size">
                       <span>42,5</span>
                     </label>                  
                   </div>
@@ -344,38 +370,45 @@
                   <div class="scard-colors-tit">Цвет:</div>
                   <div class="sproduct-color-lbls">
                     <label class="sproduct-color-lbl">
-                      <input type="checkbox" class="sproduct-color-chb" checked="">
+                      <input type="radio" class="sproduct-color-chb" name="color" checked="">
                       <span style="background-color: #e01f2e;"></span>
+                      <span class="stolltip">Красный</span>
                     </label>
                     <label class="sproduct-color-lbl">
-                      <input type="checkbox" class="sproduct-color-chb">
+                      <input type="radio" class="sproduct-color-chb" name="color">
                       <span style="background-color: #f8d800;"></span>
+                      <span class="stolltip">Желтый</span>
                     </label>
                     <label class="sproduct-color-lbl">
-                      <input type="checkbox" class="sproduct-color-chb">
+                      <input type="radio" class="sproduct-color-chb" name="color">
                       <span style="background-color: #a38b6f;"></span>
+                      <span class="stolltip">Светло-коричневый</span>
                     </label>
 
                     <label class="sproduct-color-lbl">
-                      <input type="checkbox" class="sproduct-color-chb">
+                      <input type="radio" class="sproduct-color-chb" name="color">
                       <span style="background-color: #b5b5b5;"></span>
+                      <span class="stolltip">Серый</span>
                     </label>
                     <label class="sproduct-color-lbl">
-                      <input type="checkbox" class="sproduct-color-chb">
+                      <input type="radio" class="sproduct-color-chb" name="color">
                       <span style="background-color: #000;"></span>
+                      <span class="stolltip">Черный</span>
                     </label>
                     <label class="sproduct-color-lbl">
-                      <input type="checkbox" class="sproduct-color-chb">
+                      <input type="radio" class="sproduct-color-chb" name="color">
                       <span style="background-color: #54a02b;"></span>
+                      <span class="stolltip">Зеленый</span>
                     </label>
                     <label class="sproduct-color-lbl">
-                      <input type="checkbox" class="sproduct-color-chb">
+                      <input type="radio" class="sproduct-color-chb" name="color">
                       <span style="background-color: #0f75b5;"></span>
+                      <span class="stolltip">Синий</span>
                     </label>
                   </div>
                 </div>
 
-                <div class="scard-p">Кроссовки Asics DynaFlyte 4 – это универсальные беговые кроссовки с 8-миллиметровым профилем.</div>
+                <div class="scard-p">Кроссовки Asics DynaFlyte 4 – это универсальные беговые <br>кроссовки с 8-миллиметровым профилем.</div>
                 <table class="scard-tbl">
                   <tr>
                     <td>
@@ -403,7 +436,7 @@
                   </tr>
 
                 </table>
-                <a href="#" class="scard-all-link">Все характеристики</a>
+                <a href="#scard-tabs" class="scard-all-link">Все характеристики</a>
                 <a href="#" class="instr-download"><img src="img/pdf-icon.png" class="instr-download-img" /><span class="instr-download-span-1">Инструкция</span><span class="instr-download-span-2">Скачать</span></a>
                 <a href="#" class="get-consult">
                   <span class="get-consult-span">
@@ -415,45 +448,112 @@
               </div>
               <div class="presents">
                 <div class="presents-tit">Подарки на выбор при оформлении заказа</div>
+                
                 <div class="presents-w">
-                  <div class="presents-it">
-                    <div class="presents-img-w"><img src="img/presents_1.jpg" /></div>
-                    <div class="presents-txts">
-                      <a href="#" class="presents-txt-1">Медальница <br> Fitness Place</a>
-                      <div class="presents-txt-2">в наличии</div>
+                  <label class="presents-it-label">      
+                    <input type="radio" class="presents-radio" name="presents">
+                    <div class="presents-it-inn">
+                      <div class="presents-img-w"><img src="img/presents_1.jpg" /></div>
+                      <div class="presents-txts">
+                        <span class="presents-txt-1">Медальница Fitness Place</span>
+                        <div class="presents-txt-2">в наличии</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="presents-it">
-                    <div class="presents-img-w"><img src="img/presents_2.png" /></div>
-                    <div class="presents-txts">
-                      <a href="#" class="presents-txt-1">Бутылка (фляга) для воды Fitness Place 650мл</a>
-                      <div class="presents-txt-2">в наличии</div>
+                  </label>
+
+
+                  <label class="presents-it-label">      
+                    <input type="radio" class="presents-radio" name="presents">
+                    <div class="presents-it-inn">
+                      <div class="presents-img-w"><img src="img/presents_2.png" /></div>
+                      <div class="presents-txts">
+                        <span class="presents-txt-1">Бутылка (фляга) для воды Fitness Place 650мл</span>
+                        <div class="presents-txt-2">в наличии</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="presents-it">
-                    <div class="presents-img-w"><img src="img/presents_1.jpg" /></div>
-                    <div class="presents-txts">
-                      <a href="#" class="presents-txt-1">Медальница <br> Fitness Place</a>
-                      <div class="presents-txt-2">в наличии</div>
+                  </label>
+
+                  <label class="presents-it-label">      
+                    <input type="radio" class="presents-radio" name="presents">
+                    <div class="presents-it-inn">
+                      <div class="presents-img-w"><img src="img/presents_1.jpg" /></div>
+                      <div class="presents-txts">
+                        <span class="presents-txt-1">Медальница Fitness Place</span>
+                        <div class="presents-txt-2">в наличии</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="presents-it presents-it-2">
-                    <div class="presents-img-w"><img src="img/presents_4.jpg" /></div>
-                    <div class="presents-txts">
-                      <a href="#" class="presents-txt-1">Гейт анализ</a>
-                      <div class="presents-txt-2">услуга</div>
+                  </label>
+                  <label class="presents-it-label">      
+                    <input type="radio" class="presents-radio" name="presents" checked>
+                    <div class="presents-it-inn">
+                      <div class="presents-img-w"><img src="img/presents_4.jpg" /></div>
+                      <div class="presents-txts">
+                        <span class="presents-txt-1">Gait-анализ</span>
+                        <div class="presents-txt-2">услуга</div>
+                      </div>
                     </div>
-                  </div>
+                  </label>                  
                 </div>
+
+
+
+                <div class="presents-container swiper-container">                
+                  <div class="presents-wrapper swiper-wrapper">
+                    <label class="presents-it-label swiper-slide">      
+                      <input type="radio" class="presents-radio" name="presents">
+                      <div class="presents-it-inn">
+                        <div class="presents-img-w"><img src="img/presents_1.jpg" /></div>
+                        <div class="presents-txts">
+                          <span class="presents-txt-1">Медальница Fitness Place</span>
+                          <div class="presents-txt-2">в наличии</div>
+                        </div>
+                      </div>
+                    </label>
+
+
+                    <label class="presents-it-label swiper-slide">      
+                      <input type="radio" class="presents-radio" name="presents">
+                      <div class="presents-it-inn">
+                        <div class="presents-img-w"><img src="img/presents_2.png" /></div>
+                        <div class="presents-txts">
+                          <span class="presents-txt-1">Бутылка (фляга) для воды Fitness Place 650мл</span>
+                          <div class="presents-txt-2">в наличии</div>
+                        </div>
+                      </div>
+                    </label>
+
+                    <label class="presents-it-label swiper-slide">      
+                      <input type="radio" class="presents-radio" name="presents">
+                      <div class="presents-it-inn">
+                        <div class="presents-img-w"><img src="img/presents_1.jpg" /></div>
+                        <div class="presents-txts">
+                          <span class="presents-txt-1">Медальница Fitness Place</span>
+                          <div class="presents-txt-2">в наличии</div>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="presents-it-label swiper-slide">      
+                      <input type="radio" class="presents-radio" name="presents" checked>
+                      <div class="presents-it-inn">
+                        <div class="presents-img-w"><img src="img/presents_4.jpg" /></div>
+                        <div class="presents-txts">
+                          <span class="presents-txt-1">Gait-анализ</span>
+                          <div class="presents-txt-2">услуга</div>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="swiper-button swiper-button-next"></div>
+                  <div class="swiper-button swiper-button-prev"></div>
+                </div>
+
+
+
+
+
+
+
               </div>
-
-
-
-
-
-
-
-
 
             </div><!--scard-col-l-->
 
@@ -466,6 +566,14 @@
                   </div>
                   <div class="card-prod-r-txt-1">12 299 Р</div>
                   <div class="card-prod-r-txt-2">10 546 Р</div>
+
+
+                  <div class="credit_block">в рассрочку от <span>11166</span> руб. 0% в мес.
+                    <i class="fa fa-question-circle-o"></i>
+                    <img src="img/icon_sber.png" class="icon_pokupay" title="Покупай со СберБанком в кредит">
+                    <img src="img/icon_tin.png" class="icon_pokupay" title="Тинькофф кредит">
+                  </div>
+
                   <div class="bonus-w">
                     <a href="#" class="bonus-row">
                       <div class="bonus-log"><img src="img/logo_bonus_1.png" class="" /></div>
@@ -476,7 +584,7 @@
                       <div class="bonus-txt">2 635 бонусов</div>
                     </a>
                   </div>
-                  <div class="card-prod-disc"><span class="card-prod-disc-span">Скидка 2%</span>при оплате картой'на сайте</div>
+                  <div class="card-prod-disc"><span class="card-prod-disc-span">Скидка 2%</span>при оплате картой на сайте</div>
                   <div class="card-prod-choice-w">
                     <div class="card-prod-choice-txt-1">Вы выбрали:</div>
                     <div class="card-prod-choice-info">
@@ -545,7 +653,7 @@
               <div class="scard-set-w">
                 <div class="scard-set-l">
 
-                  <div class="scard-set-products">
+                  <div class="scard-set-products scard-set-products-1">
 
                     <div class="catalog-item">
                       <div class="sproduct-cont-1">
@@ -598,10 +706,67 @@
 
                   </div>
 
-                  <div class="scard-p">Недорогое, но эффективное решение для домашнего фитнеса. Включает в себя силовой комплекс, беговую дорожку, спортпитание на месяц и одежду для фитнеса (размер на выбор).</div>
-                  <div class="scard-set-description">
-                    <div class="scard-set-description-b">В комплекте:</div>
-                    <div class="scard-set-description-p">GIANT Педали SHREDDER FLAT PEDAL белый Джерси утепленное с длинным рукавом PODIU Компрессионные рукава GIANT COMPRESSION</div>
+                  <div class="scard-set-container scard-set-products-2 swiper-container">
+                    <div class="scard-set-wrapper swiper-wrapper">
+
+                      <div class="catalog-item swiper-slide">
+                        <div class="sproduct-cont-1">
+                          <div href="#" class="sproduct-top">
+                            <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-44.jpg"></a>
+                          </div>
+                          <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+                          <div class="sproduct-pay">от 348 Р в мес.<a href="#" class="sproduct-pay-info"></a></div>
+                          <div class="sproduct-price-row">
+                            <span class="sproduct-price">8 843 Р</span>
+                            <!--span class="sproduct-price-old">11 790 Р</span-->
+                            <a href="#" class="sproduct-watsupp"></a>
+                          </div>
+                          <div class="sproduct-availability">в наличии</div>
+                        </div><!--cont-1-->
+                      </div><!--item-->
+
+                      <div class="catalog-item swiper-slide">
+                        <div class="sproduct-cont-1">
+                          <div href="#" class="sproduct-top">
+                            <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-55.jpg"></a>
+                          </div>
+                          <a href="#" class="sproduct-title">Кроссовки женские ASICS GEL-EXCITE 6 TWIST</a>
+                          <div class="sproduct-pay">от 348 Р в мес.<a href="#" class="sproduct-pay-info"></a></div>
+                          <div class="sproduct-price-row">
+                            <span class="sproduct-price">4 868 Р</span>
+                            <!--span class="sproduct-price-old">11 790 Р</span-->
+                            <a href="#" class="sproduct-watsupp"></a>
+                          </div>
+                          <div class="sproduct-availability">в наличии</div>
+                        </div><!--cont-1-->
+                      </div><!--item-->
+
+                      <div class="catalog-item swiper-slide">
+                        <div class="sproduct-cont-1">
+                          <div href="#" class="sproduct-top">
+                            <a href="#" class="product-img-w"><img alt="image" title="image" src="img/sneaker-66.jpg"></a>
+                          </div>
+                          <a href="#" class="sproduct-title">Кроссовки мужские Hoka SPEEDGOAT 4</a>
+                          <div class="sproduct-pay">от 348 Р в мес.<a href="#" class="sproduct-pay-info"></a></div>
+                          <div class="sproduct-price-row">
+                            <span class="sproduct-price">8 843 Р</span>
+                            <!--span class="sproduct-price-old">11 790 Р</span-->
+                            <a href="#" class="sproduct-watsupp"></a>
+                          </div>
+                          <div class="sproduct-availability">в наличии</div>
+                        </div><!--cont-1-->
+                      </div><!--item-->
+                    </div>
+                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-prev"></div>
+                  </div>
+
+                  <div class="scard-set-desc">
+                    <div class="scard-p">Недорогое, но эффективное решение для домашнего фитнеса. Включает в себя силовой комплекс, беговую дорожку, спортпитание на месяц и одежду для фитнеса (размер на выбор).</div>
+                    <div class="scard-set-description">
+                      <div class="scard-set-description-b">В комплекте:</div>
+                      <div class="scard-set-description-p">GIANT Педали SHREDDER FLAT PEDAL белый Джерси утепленное с длинным рукавом PODIU Компрессионные рукава GIANT COMPRESSION</div>
+                    </div>
                   </div>
                 </div>
                 <div class="scard-set-r">
@@ -616,7 +781,7 @@
                 </div>
               </div>
             </div>
-            <div class="scard-tabs">
+            <div class="scard-tabs" id="scard-tabs">
               <ul class="tabs-control">
                 <li class="tabs_control_item active">
                   <a href="#" class="tabs_control_link">Описание</a>
@@ -638,7 +803,7 @@
                 </li>
               </ul>
               <ul class="tabs_content">
-                <li class="tabs_content_item active">
+                <li class="tabs_content_item">
                   <div class="tabs_content_item-p">
                     Это универсальный гравийный байк для тех, кто не любит ограничивать себя трассой и не против промчать на своём байке по легкий пересечённой местности. Прочная и легкая рама, сделанная по технологии ALUXX-Grade
                     Aluminum. Универсальная гравийная геометрия, которая обеспечит отличный контроль и управление велосипедом. За качество переключения скоростей здесь отвечает фирма Shimano и её шоссейная группа Sora.
@@ -649,14 +814,181 @@
                   </div>
                 </li>
                 <li class="tabs_content_item">
-                  <p>Механические дисковые тормоза Tektro MD-C550 обеспечат надежное и плавное торможение. Система FSA Vero Pro даст отличную жесткость и передачу усилия на трансмиссию. Фирменный вилсет Giant S-X2 в сочетании с
-                  толстыми покрышками Giant CrossCut, обеспечат хорошим накатом и сцеплением.</p>
+
+
+                  <table class="scard-tbl scard-tbl-2">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="dots"><span> Бренд </span></div>
+                        </td>
+                        <td>Hoka</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="dots"><span>Марка</span></div>
+                        </td>
+                        <td>Hoka</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Пол</span></div>
+                        </td>
+                        <td>Мужской</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Сезон одежды и обуви</span></div>
+                        </td>
+                        <td>Зима</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Амортизация</span></div>
+                        </td>
+                        <td>Сильная</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>На главную</span></div>
+                        </td>
+                        <td>Да</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Старая цена</span></div>
+                        </td>
+                        <td>14290</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Коллекция</span></div>
+                        </td>
+                        <td>SS20</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Тип кроссовок</span></div>
+                        </td>
+                        <td>Тренировочные</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Пронация</span></div>
+                        </td>
+                        <td>Нейтральная</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Перепад, мм</span></div>
+                        </td>
+                        <td>0-4</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Ширина колодки</span></div>
+                        </td>
+                        <td>Стандартная</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Покрытие</span></div>
+                        </td>
+                        <td>Тропы и грунтовки</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Вес одного кроссовка, г</span></div>
+                        </td>
+                        <td>350-399</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Наличие мембраны</span></div>
+                        </td>
+                        <td>Да</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Вид спорта</span></div>
+                        </td>
+                        <td>Бег</td>
+                      </tr>       <tr>
+                        <td>
+                          <div class="dots"><span>Модельный год</span></div>
+                        </td>
+                        <td>2020</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
                 </li>
-                <li class="tabs_content_item">
-                  <div class="tabs_content_item-p">
-                    Это универсальный гравийный байк для тех, кто не любит ограничивать себя трассой и не против промчать на своём байке по легкий пересечённой местности. Прочная и легкая рама, сделанная по технологии ALUXX-Grade
-                    Aluminum. Универсальная гравийная геометрия, которая обеспечит отличный контроль и управление велосипедом. За качество переключения скоростей здесь отвечает фирма Shimano и её шоссейная группа Sora.
-                  </div>                  
+                <li class="tabs_content_item active">
+
+
+                  <div class="addrev-wrap">
+                    <div class="addrev">
+                      <div class="addrev-col">
+                        <div class="addrev-item-row">
+                          <div class="addrev-label">Ваша оценка</div>
+                          <div class="addrev-star-row">
+                            <div class="addrev-stars" data-total-value="0">
+                              <span class="addrev-star-star" data-item-value="5">★</span>                              
+                              <span class="addrev-star-star" data-item-value="4">★</span>                              
+                              <span class="addrev-star-star" data-item-value="3">★</span>                              
+                              <span class="addrev-star-star" data-item-value="2">★</span>                              
+                              <span class="addrev-star-star" data-item-value="1">★</span>                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="addrev-item-row">
+                          <div class="addrev-label">Достоинства</div>
+
+                          <input class="addrev-input" type="text" placeholder=" " />
+                        </div>
+
+                        <div class="addrev-item-row">
+                          <div class="addrev-label">Имя</div>
+
+                          <input class="addrev-input" type="text" placeholder=" " />
+                        </div>
+                      </div>
+                      <div class="addrev-col">
+                        <div class="addrev-item-row">
+                          <div class="addrev-label">Срок использования</div>
+
+                          <div class="term-row"><span class="term-span">Менее 1 месяца</span><span class="term-span">Менее 1 года</span><span class="term-span">Более 1 года</span></div>
+                        </div>
+                        <div class="addrev-item-row">
+                          <div class="addrev-label">Недостатки</div>
+
+                          <input class="addrev-input" type="text" placeholder=" " />
+                        </div>
+
+                        <div class="addrev-item-row">
+                          <div class="agree-row">
+                            <div class="agree-col-1">
+                              <label class="agree-label">
+                                <input class="agree-checkbox" type="checkbox" />
+                                <span class="agree-span"></span>
+                                <span class="agree-txt">Я даю согласие на обработку моих персональных данных</span>
+                              </label>
+                            </div>
+                            <div class="agree-col"><img src="img/cap.jpg" /></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="addrev-col">
+                        <div class="addrev-item-row">
+                          <div class="addrev-label">Порекомендовали бы друзьям?</div>
+
+                          <div class="term-row"><span class="term-span-act">Да</span><span class="term-span">Нет</span></div>
+                        </div>
+                        <div class="addrev-item-row">
+                          <div class="addrev-label">Общий комментарий</div>
+
+                          <input class="addrev-input" type="text" placeholder=" " />
+                        </div>
+
+                        <div class="addrev-item-row">
+                          <div class="addrev-label">Введите код</div>
+
+                          <input class="addrev-input" type="text" placeholder=" " />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="addrev-btn-w"><a class="addrev-btn">Отправить отзыв</a></div>
+                  </div>
+
+
+
                 </li>
                 <li class="tabs_content_item">
                   <p>Механические дисковые тормоза Tektro MD-C550 обеспечат надежное и плавное торможение. Система FSA Vero Pro даст отличную жесткость и передачу усилия на трансмиссию. Фирменный вилсет Giant S-X2 в сочетании с
@@ -945,7 +1277,32 @@
               </footer>
 
 
-</div><!--wrapper-->
+<div class="popup">
+  <a href="#" class="pop-close"></a>
+  <h3>Покупка через сервис "Покупай со Сбером" <img src="img/pokupay_logo_color.png" height="30" alt="" width="66"></h3>
+
+  <div class="credit_block_text">
+    <i class="fa fa-clock-o"></i>
+    <div>
+      <img src="img/3571d1a5748cdcb6c8f285a716a69a5f.png" width="150" height="43" title="Покупка в рассрочку через сервис Покупай со Сбером"><br>
+      <p><b>Срок рассрочки - от 6, 9, 10, 12, 18, 24 месяцев</b><br>Первоначальный взнос - 0% от суммы покупки</p>
+    </div>
+  </div>
+
+  <div class="credit_block_text">
+    <i class="fa fa-percent"></i>
+    <div>
+      <img src="img/1c75487733cb0eeb65fddcedd1a9c7d5.png" width="150" height="43" title="Покупка в кредит через сервис Покупай со Сбером"><br>
+      <p><b>Срок - от 3 до 24 месяцев</b><br>Первоначальный взнос - 0% от суммы покупки</p>
+    </div>
+  </div>
+  <a href="/credit/" target="_top" style="font:10pt normal arial,verdana; color:deepskyblue; text-decoration:none; border-bottom:1px solid deepskyblue;">Подробнее об условиях покупки в кредит или рассрочку</a>
+
+  <br>
+
+</div>
+
+
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
@@ -953,6 +1310,7 @@
 <script src="js/nouislider.js"></script>
 <script src="js/wNumb.min.js"></script>
 <script src="js/select2.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/script.js"></script>
 </body>

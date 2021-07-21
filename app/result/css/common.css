@@ -7182,9 +7182,9 @@ input.btn {
 .scard-info-char {
   margin-right: 38px;
   font-size: 14px;
-  color: #999999; }
+  color: #313130; }
   .scard-info-char span {
-    color: #313130; }
+    color: #999999; }
 
 .sproduct-actions {
   display: -webkit-flex;
@@ -7195,7 +7195,8 @@ input.btn {
           align-items: center;
   position: absolute;
   right: 0px;
-  top: 0px; }
+  top: 0px;
+  z-index: 10; }
 
 .sproduct-compare {
   background-image: url("../img/weight_icon.png");
@@ -7204,6 +7205,24 @@ input.btn {
   width: 24px;
   height: 19px;
   display: block; }
+
+.sproduct-compare-lbl {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer; }
+  .sproduct-compare-lbl:hover input[type="checkbox"] + svg path {
+    fill: #a7a7a7; }
+  .sproduct-compare-lbl input[type="checkbox"] {
+    display: none; }
+    .sproduct-compare-lbl input[type="checkbox"] + svg {
+      height: 19px; }
+    .sproduct-compare-lbl input[type="checkbox"]:checked + svg path {
+      fill: #a7a7a7; }
+
+.sproduct-like-lbl {
+  top: 0;
+  right: 33px; }
 
 .sproduct-like {
   background-image: url("../img/like_icon.png");
@@ -7234,7 +7253,8 @@ input.btn {
           justify-content: center;
   position: absolute;
   left: 0px;
-  top: 0px; }
+  top: 0px;
+  z-index: 10; }
   .sproduct-sale:hover {
     color: #FFF;
     text-decoration: none; }

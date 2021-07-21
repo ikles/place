@@ -7232,10 +7232,10 @@ input.btn {
 }
 .scard-info-char {
   margin-right: 38px;
-  font-size: 14px;
-  color: #999999;
+  font-size: 14px;  
+  color: #313130;
   span {    
-color: #313130;
+color: #999999;
   }
 }
 
@@ -7245,6 +7245,7 @@ color: #313130;
   position: absolute;
   right: 0px;
   top: 0px;
+  z-index: 10;
 }
 
 .sproduct-compare {
@@ -7254,6 +7255,44 @@ color: #313130;
   width: 24px;
   height: 19px;
   display: block;
+}
+
+
+
+.sproduct-compare-lbl {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  &:hover {
+    input[type="checkbox"] {
+      + svg {            
+        path {
+          fill: #a7a7a7;
+        }
+      }    
+    }
+
+
+  }
+  input[type="checkbox"] {
+    display: none;
+    + svg {            
+      height: 19px;      
+    }
+    &:checked {
+      + svg {
+        path {          
+          fill: #a7a7a7;
+        }
+      }
+    }
+  }
+}
+
+.sproduct-like-lbl {
+  top: 0;
+  right: 33px;
 }
 
 .sproduct-like {
@@ -7281,6 +7320,7 @@ color: #313130;
   position: absolute;
   left: 0px;
   top: 0px;
+  z-index: 10;
   &:hover {
     color: #FFF;
     text-decoration: none;
