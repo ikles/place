@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=1200px"-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа</title>
+  <link rel='preload' href='fonts/fontawesome-webfont.woff' as='font' type='font/woff' crossorigin />
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link href="css/font-awesome.min.css" type="text/css" data-template-style="true" rel="stylesheet" />
+  <link rel="stylesheet" href="css/ordering.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div class="wrapper">
+
+    @@include('var/_header.html')
+
+    <div class="ordering-page">
+      <div class="advants">
+        <div class="container">
+          <div class="advants-w">
+            <div class="advant">
+              <div class="advant-img"><img src="img/advant_1.png" /></div>
+              <div class="advant-txt">
+                Бесплатная<br />
+                доставка и сборка<br />
+                от 20 000 рублей
+              </div>
+            </div>
+            <div class="advant">
+              <div class="advant-img"><img src="img/advant_2.png" /></div>
+              <div class="advant-txt">
+                Тест-драйв в шоу-руме –<br>
+                сделайте осознанный <br>
+                выбор!
+              </div>
+            </div>
+            <div class="advant">
+              <div class="advant-img"><img src="img/advant_3.png" /></div>
+              <div class="advant-txt">
+                Бесплатный Gait-анализ <br>
+                при выборе кроссовок
+              </div>
+            </div>
+            <div class="advant">
+              <div class="advant-img"><img src="img/advant_4.png" /></div>
+              <div class="advant-txt">
+                Подарки к каждой <br>
+                покупке!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="ordering">
+        <div class="container">
+          <div class="padding_22">
+            <div class="bread">
+              <ul class="bread-ul">
+                <li class="bread-li"><a href="#" class="bread-a">Главная</a></li>
+                <li class="bread-li"><a href="#" class="bread-a">Каталог</a></li>
+                <li class="bread-li"><span class="bread-span">Обувь</span></li>
+              </ul>
+            </div>
+
+
+            <div class="ordering-content">
+              <div class="cat-title-wrap">
+                <h2 class="cat-title">Оформление заказа</h2>
+              </div>
+
+
+
+
+
+
+              <div class="columns-row">
+
+                <div class="column-l">
+
+                  <form class="ordering-form">
+                    <div class="ordering-block">
+                      <div class="ordering-h1"><i class="igeo"></i>Тип покупателя и регион доставки</div>
+                      <div class="ordering-radios-hor">
+                        <label class="ordering-label">
+                          <input type="radio" name="ordering-1" value="Физическое лицо" checked>
+                          <span class="ordering-radio-span"></span>
+                          <span class="ordering-radio-txt">Физическое лицо</span>
+                        </label>
+                        <label class="ordering-label">
+                          <input type="radio" name="ordering-1" value="Юридическое лицо">
+                          <span class="ordering-radio-span"></span>
+                          <span class="ordering-radio-txt">Юридическое лицо</span>
+                        </label>
+                      </div>
+                      <div class="ordering-data-item">
+                        <div class="ordering-data-title">Местоположение</div>
+                        <div class="ordering-data-btns">
+                          <span class="ordering-data-btn" data-city="Екатеринбург">Екатеринбург</span>
+                          <span class="ordering-data-btn" data-city="Челябинск">Челябинск</span>
+                          <span class="ordering-data-btn" data-city="Миасс">Миасс</span>
+                        </div>
+                        <input class="ordering-input ordering-input-search" type="text" placeholder="Введите название ..." / required>
+                      </div>
+                      <div class="ordering-data-item">
+                        <div class="ordering-data-title">Индекс</div>
+                        <input class="ordering-input" type="text" placeholder="10100" />
+                        <div class="ordering-data-desc">Выберите свой город в списке, Если вы не нашли свой город, выберите «другое местопложение», а город впишите в поле «Город»</div>
+                      </div>
+                    </div>
+                    <div class="ordering-row">
+                      <div class="ordering-col">
+                        <div class="ordering-h1"><i class="idel"></i>Доставка</div>
+                        <div class="ordering-deliv-row">
+                          <div class="ordering-deliv-it">
+                            <label class="ordering-deliv-label">
+                              <input type="radio" name="ordering-deliv-radio" checked>
+                              <span class="ordering-radio-span"></span>
+                              <span class="ordering-radio-txt">Доставка курьером СДЭК</span>
+                            </label>
+                            <div class="ordering-deliv-content">
+                              <span class="ordering-deliv-price">850 руб.</span>
+                              <div class="ordering-deliv-info-it">
+                                <div class="ordering-deliv-marker">Срок доставки:</div>
+                                <div class="ordering-deliv-gray-txt">от 1 до 5 дней</div>
+                              </div>
+                              <div class="ordering-data-item ordering-data-item3">
+                                <div class="ordering-data-title2">Грузчики (шт.) (200 руб.)</div>
+                                <input class="ordering-input" type="text" placeholder="" />
+                                <div class="ordering-data-desc ordering-data-desc2">Вышлем грузчиков для проведения работ.</div>
+                              </div>
+                              <label class="ordering-label-check">
+                                <input type="checkbox" name="ordering-deliv-check">
+                                <span class="ordering-check-span"></span>
+                                <span class="ordering-check-txt">Подарочная упаковка (100 руб.)</span>                                
+                              </label>
+                              <div class="ordering-data-desc ordering-data-desc2">
+                                  Запакуем товар в подарочную упаковку. <br>
+                                  Доставка осуществляется в течении дня в удобное <br>
+                                  для вас время.
+                                </div>
+                            </div>
+                          </div>
+                          <div class="ordering-deliv-it">
+                            <label class="ordering-deliv-label">
+                              <input type="radio" name="ordering-deliv-radio">
+                              <span class="ordering-radio-span"></span>
+                              <span class="ordering-radio-txt">Доставка курьером</span>
+                            </label>
+                          </div>
+                          <div class="ordering-deliv-it">
+                            <label class="ordering-deliv-label">
+                              <input type="radio" name="ordering-deliv-radio">
+                              <span class="ordering-radio-span"></span>
+                              <span class="ordering-radio-txt">Собственная доставка по Москве и области</span>
+                            </label>
+                          </div>
+                          <div class="ordering-deliv-it">
+                            <label class="ordering-deliv-label">
+                              <input type="radio" name="ordering-deliv-radio">
+                              <span class="ordering-radio-span"></span>
+                              <span class="ordering-radio-txt">Самовывоз</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ordering-col ordering-col-2">
+                        <div class="ordering-h1"><i class="ipay"></i>Оплата</div>
+                        <div class="ordering-deliv-row">
+                          <div class="ordering-deliv-it">
+                            <label class="ordering-deliv-label">
+                              <input type="radio" name="ordering-deliv-radio2" checked>
+                              <span class="ordering-radio-span"></span><span class="ordering-radio-txt">Наложенный платеж</span></label>
+                            </div>
+                            <div class="ordering-deliv-it">
+                              <label class="ordering-deliv-label">
+                                <input type="radio" name="ordering-deliv-radio2">
+                                <span class="ordering-radio-span"></span><span class="ordering-radio-txt">Банковские карты</span></label>
+                              </div>
+                              <div class="ordering-deliv-it">
+                                <label class="ordering-deliv-label">
+                                  <input type="radio" name="ordering-deliv-radio2">
+                                  <span class="ordering-radio-span"></span><span class="ordering-radio-txt">Терминалы</span></label>
+                                </div>
+                                <div class="ordering-deliv-it">
+                                  <label class="ordering-deliv-label">
+                                    <input type="radio" name="ordering-deliv-radio2">
+                                    <span class="ordering-radio-span"></span><span class="ordering-radio-txt">Наличные курьеру</span></label>
+                                  </div>
+                                  <div class="ordering-deliv-it">
+                                    <label class="ordering-deliv-label">
+                                      <input type="radio" name="ordering-deliv-radio2">
+                                      <span class="ordering-radio-span"></span><span class="ordering-radio-txt">Оплата в платежной системе WebMoney</span></label>
+                                    </div>
+                                    <div class="ordering-deliv-it">
+                                      <label class="ordering-deliv-label">
+                                        <input type="radio" name="ordering-deliv-radio2">
+                                        <span class="ordering-radio-span"></span><span class="ordering-radio-txt">Сбербанк</span></label>
+                                      </div>
+                                      <div class="ordering-pay-total">
+                                        <div class="ordering-deliv-marker2">
+                                          Стоимость:<br />
+                                          ~150 руб.
+                                        </div>
+                                        <div class="ordering-deliv-gray-txt2">Оплата с помощью наложенного платежа</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="ordering-block ordering-block-2">
+                                  <div class="ordering-h1"><i class="icust"></i>Покупатель</div>
+                                  <div class="customer-wrap">
+                                    <div class="ordering-data-item2">
+                                      <div class="ordering-data-title">Ф.И.О.</div>
+                                      <input class="ordering-input" type="text" placeholder="" name="fio" required />
+                                    </div>
+                                    <div class="ordering-data-item2">
+                                      <div class="ordering-data-title">Телефон</div>
+                                      <input class="ordering-input" type="text" placeholder="" name="phone" required />
+                                    </div>
+                                    <div class="ordering-data-item2">
+                                      <div class="ordering-data-title">Email</div>
+                                      <input class="ordering-input" type="text" placeholder="" name="email" required />
+                                    </div>
+                                    <div class="ordering-data-item2">
+                                      <div class="ordering-data-title">Дата доставки</div>
+                                      <input class="ordering-input ordering-input-date" type="text" name="date" placeholder="" />
+                                    </div>
+                                    <div class="ordering-data-item2">
+                                      <div class="ordering-data-title">Город</div>
+                                      <select class="ordering-data-select">
+                                        <option value="Москва">Москва</option>
+                                        <option value="Омск">Омск</option>
+                                        <option value="Томск">Томск</option>
+                                      </select>
+                                    </div>
+                                    <div class="ordering-data-item2">
+                                      <div class="ordering-data-title">Адрес</div>
+                                      <input class="ordering-input" type="text" placeholder="" name="adress" required />
+                                    </div>
+                                    <div class="ordering-data-item2">
+                                      <div class="ordering-data-title">Комментарий к заказу</div>
+                                      <input class="ordering-input" type="text" name="comment" placeholder="" />
+                                    </div>
+                                  </div>
+
+                                </div>
+
+                                <div class="ordering-prods">
+                                  <div class="ordering-prods-row-1">
+                                    <div class="ordering-prods-col">
+                                      <div class="ordering-h1"><i class="icart"></i>Товары в заказе</div>
+                                    </div>
+                                    <div class="ordering-prods-col2"><a href="#" class="red-link">Подробнее</a></div>
+                                  </div>
+                                  <div class="ordering-prods-row-2">
+                                    <table class="ordering-table">
+                                      <tbody>
+                                        <tr>
+                                          <td>Наименование</td>
+                                          <td>Скидка</td>
+                                          <td>Цена</td>
+                                          <td>Вес</td>
+                                          <td>Количество</td>
+                                          <td>Сумма</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <div class="ordering-prods-row-3">
+                                    <table class="ordering-table">
+                                      <tbody>
+                                        <tr>
+                                          <td>
+                                            <a href="#" class="ordering-product-link">
+                                              <div class="ordering-img-w"><img src="img/bike_1_23514.jpg" /></div>
+                                              <span class="ordering-product-txt">Комфортный велосипед GIANT Sedona DX 2021</span>
+                                            </a>
+                                          </td>
+                                          <td>0%</td>
+                                          <td><strong>7 590 руб.</strong></td>
+                                          <td>0 г</td>
+                                          <td>1 шт.</td>
+                                          <td><strong>7 590 руб.</strong></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                                <div class="ordering-prods-btn-w">
+                                  <button class="ordering-prods-btn btn">Оформить заказ</button>
+                                </div>
+
+                              </form>
+
+
+
+
+                            </div>
+                            <!--column-l-->
+
+                            <div class="column-r">
+
+                              <div class="rblock">
+                                <div class="rblock-top">
+                                  <div class="rblock-row">
+                                    <div class="rblock-col-1">Товаров на:</div>
+                                    <div class="rblock-col-2">7 590 руб.</div>
+                                  </div>
+                                  <div class="rblock-row">
+                                    <div class="rblock-col-1">Доставка:</div>
+                                    <div class="rblock-col-2">500 руб.</div>
+                                  </div>
+                                </div>
+                                <div class="rblock-bot">
+                                  <div class="rblock-tot-row">
+                                    <div class="rblock-tot-col1">Итого:</div>
+                                    <div class="rblock-tot-col2">
+                                    10 546 Р</div>
+                                  </div>
+                                  <div class="rblock-row">
+                                    <div class="rblock-col-1">Дополнительно<br>
+                                      наложенный<br>
+                                    платеж:</div>
+                                    <div class="rblock-col-2">~150 руб.</div>
+                                  </div>
+                                </div><button class="rblock-btn btn">Оформить заказ</button>
+                              </div>
+
+                            </div>
+                            <!--column-r-->
+
+                          </div>
+                          <!--columns-row-->
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                    @@include('var/_footer.html')
+
+
+
+
+
+
+                    <script src="js/jquery-3.4.1.min.js"></script>
+                    <script src="js/jquery.maskedinput.min.js"></script>
+                    <script src="js/swiper-bundle.min.js"></script>
+                    <script src="js/nouislider.js"></script>
+                    <script src="js/wNumb.min.js"></script>
+                    <script src="js/select2.min.js"></script>
+                    <script src="js/jquery.fancybox.min.js"></script>
+                    <script src="js/common.js"></script>
+                    <script src="js/script.js"></script>
+                  </body>
+
+                  </html>

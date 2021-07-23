@@ -59,11 +59,76 @@ $('[data-fancybox="gallery-1"]').fancybox({
 });
 }
 
+if ( $('[data-fancybox="gallery-2"]').length ) {
+
+$('[data-fancybox="gallery-2"]').fancybox({
+  arrows: true,
+  infobar: true,
+  smallBtn: true,
+  toolbar: true,
+  iframe : {
+    css : {
+      width : '950px'
+    }
+  },   
+  thumbs : {
+    autoStart : true,
+    axis      : 'y'
+  }, 
+  slideClass: "myClass",
+  baseClass: "myclass"
+});
+}
+
+if ( $('[data-fancybox="gallery-3"]').length ) {
+
+$('[data-fancybox="gallery-3"]').fancybox({
+  arrows: true,
+  infobar: true,
+  smallBtn: true,
+  toolbar: true,
+  iframe : {
+    css : {
+      width : '950px'
+    }
+  },   
+  thumbs : {
+    autoStart : true,
+    axis      : 'y'
+  }, 
+  slideClass: "myClass",
+  baseClass: "myclass"
+});
+}
+
+if ( $('[data-fancybox="gallery-4"]').length ) {
+
+$('[data-fancybox="gallery-4"]').fancybox({
+  arrows: false,
+  infobar: false,
+  smallBtn: false,
+  toolbar: true,
+  iframe : {
+    css : {
+      width : '950px'
+    }
+  },    
+  slideClass: "myClass",
+  baseClass: "myclass"
+});
+}
+
 
 $('.addrev-star-star').click(function () {
   $(this).parent().attr('data-total-value', $(this).attr('data-item-value'));
 });
 
+
+$('.sproduct-color-lbls-2 .sproduct-color-lbl').click(function () {  
+  let num = $(this).index();
+  $('.sproduct-color-info li').removeClass('active');
+  $('.sproduct-color-info li').eq(num).addClass('active');
+});
 
 
 $('a[href*=\\#]:not([href=\\#])').click(function () {
@@ -85,10 +150,14 @@ $('.credit_block').click(function () {
   $('.popup').fadeIn();
 });
 
-$('body, .pop-close').click(function () {
+$('body, .pop-close').click(function () {  
   $('.popup').fadeOut();
 });
 
+$('.ordering-data-btn').click(function () {
+  let data = $(this).attr('data-city');
+  $('.ordering-input-search').attr('value', data);
+});
 
 $('.credit_block, .popup').click(function (e) {
   e.stopPropagation();
@@ -331,6 +400,12 @@ $(window).resize(function() {
 
 if ( $('.card-prod-r-basket-input').length) {
   $('.card-prod-r-basket-input').select2({
+    minimumResultsForSearch: -1
+  });    
+}
+
+if ( $('.ordering-data-select').length) {
+  $('.ordering-data-select').select2({
     minimumResultsForSearch: -1
   });    
 }
